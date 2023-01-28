@@ -11,7 +11,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 
 @CucumberOptions(
-        features = "src/main/resources/Scenario.feature",
+        features = "src/test/resources/Scenario.feature",
         glue = {"stepdefinitions"},
         plugin = "json:target/cucumber-reports/CucumberTestReport.json")
 public class RunnerTests extends AbstractTestNGCucumberTests {
@@ -21,17 +21,25 @@ public class RunnerTests extends AbstractTestNGCucumberTests {
     public void setUpCucumber() {
         testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
     }
-        @BeforeMethod(alwaysRun = true)
-        @Parameters({"browser", "version", "platform"})
-        public void setUpClass(String browser, String version, String platform) throws Exception {
-            DesiredCapabilities capability = new DesiredCapabilities();
-            capability.setCapability(CapabilityType.BROWSER_NAME, browser);
-            capability.setCapability(CapabilityType.VERSION, version);
-            capability.setCapability(CapabilityType.PLATFORM, platform);
-        }
+
+    @BeforeMethod(alwaysRun = true)
+    @Parameters({"browser", "version", "platform"})
+    public void setUpClass(String browser, String version, String platform){
+        DesiredCapabilities capability = new DesiredCapabilities();
+        capability.setCapability(CapabilityType.BROWSER_NAME, browser);
+        capability.setCapability(CapabilityType.VERSION, version);
+        capability.setCapability(CapabilityType.PLATFORM, platform);
+    }
+
     @DataProvider
     public Object[][] features() {
         return testNGCucumberRunner.provideScenarios();
     }
-
+    /*
+WebDriverManager.firefoxdriver().setup();
+WebDriverManager.edgedriver().setup();
+WebDriverManager.operadriver().setup();
+WebDriverManager.chromiumdriver().setup()
+WebDriverManager.iedriver().setup();
+     */
 }

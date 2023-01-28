@@ -11,10 +11,7 @@ import manager.PageFactoryManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.util.concurrent.TimeUnit;
-
 import static io.github.bonigarcia.wdm.WebDriverManager.chromedriver;
-import static org.testng.Assert.assertTrue;
 
 public class DefinitionSteps extends RunnerTests {
     private static final long DEFAULT_TIMEOUT = 60;
@@ -28,26 +25,38 @@ public class DefinitionSteps extends RunnerTests {
         driver.manage().window().maximize();
         pageFactoryManager = new PageFactoryManager(driver);
     }
+
+    // @Given("I use {string}")
+    //public void iUse(String browser) {
+    //    driver = WebDriverManager.getInstance(browser).create();
+    // }
     @After
     public void tearDown() {
         driver.quit();
     }
 
     @And("User opens {string} page")
-    public void openPage(final String url) {
+    public void openPage(final String url) throws InterruptedException {
         homePage = pageFactoryManager.getHomePage();
         homePage.openHomePage(url);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS) ;
-        homePage.waitForPageLoading();
-    }
-    @When("User clicking button below graph with name Google search for highcharts")
-    public void userClickingButtonBelowGraphWithNameGoogleSearchForHighcharts() {
-        homePage.clickGraphsButton1();
-    }
-    @Then("User checks query generated {string}")
-    public void userCheckQueryGenerated(final String query) {
-    assertTrue( homePage.isQueryContainSearchKeyWords(query));
+     //   driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+      //  homePage.waitForPageLoading();
+        Thread.sleep(1000);
     }
 
+    @When("User clicking button below graph with name Google search for highcharts")
+    public void userClickingButtonBelowGraphWithNameGoogleSearchForHighcharts() {
+        homePage.clickFirstGraphsButton();
+    }
+
+    @And("User clicking button to it with name Revenue")
+    public void userClickingButtonToItWithNameRevenue() {
+        homePage.clickSecondGraphsButton();
+    }
+
+    @Then("User checks tooltip {string}")
+    public void userChecksTooltipText(final String text) throws InterruptedException {
+        homePage.checkTooltip(text);
+    }
 }
 

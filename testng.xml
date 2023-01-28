@@ -20,14 +20,4 @@
             <class name="TestngCucumberRunner.RunnerTests" />
         </classes>
     </test> <!-- Test -->
-    <test name="EDGE" annotations="JDK"
-          preserve-order="true">
-        <parameter name="browser" value="Microsoft Edge"/>
-        <parameter name="version" value="latest"/>
-        <parameter name="platform" value="Windows 10"/>
-        <classes>
-            <class name="TestngCucumberRunner.RunnerTests" />
-        </classes>
-    </test> <!-- Test -->
-
 </suite>
