@@ -1,7 +1,7 @@
 package manager;
 
 import org.openqa.selenium.WebDriver;
-import Pages.*;
+import pages.*;
 
 public class PageFactoryManager {
 

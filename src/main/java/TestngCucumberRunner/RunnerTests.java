@@ -35,11 +35,5 @@ public class RunnerTests extends AbstractTestNGCucumberTests {
     public Object[][] features() {
         return testNGCucumberRunner.provideScenarios();
     }
-    /*
-WebDriverManager.firefoxdriver().setup();
-WebDriverManager.edgedriver().setup();
-WebDriverManager.operadriver().setup();
-WebDriverManager.chromiumdriver().setup()
-WebDriverManager.iedriver().setup();
-     */
+
 }
