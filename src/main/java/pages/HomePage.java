@@ -5,11 +5,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 
 public class HomePage extends BasePage {
@@ -32,38 +35,44 @@ public class HomePage extends BasePage {
         super(driver);
     }
 
-    public void openHomePage(String url) throws InterruptedException {
+    public void openHomePage(String url)  {
         driver.get(url);
-        magickWaiter(500);
-        cookie.click();
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(5))
+                    .until(ExpectedConditions
+                            .elementToBeSelected(cookiePopUpDialog));
+            //this condition never pass so we click on cookie after wait
+        } catch (Exception e) {
+            cookie.click();
+        }
     }
 
     public void clickFirstGraphsButton() {
-        waitForElementToBeClickable(60, graphsButtons.get(0));
         graphsButtons.get(0).click();
+
     }
 
     public void clickSecondGraphsButton() {
         graphsButtons.get(1).click();
     }
 
-    public void checkTooltip() throws  IOException {
+    public void checkTooltip() throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader("tooltipSpanTextForGraphCoordinate"));
         String line;
         Actions ac = new Actions(driver);
         //here action for first element as he reacts differently
         ac.moveToElement(boxForHighsoftGraph)
-                .moveToElement(boxForHighsoftGraph,-400,50).perform();
-        line =reader.readLine();
+                .moveToElement(boxForHighsoftGraph, -400, 50).perform();
+        line = reader.readLine();
         Assert.assertTrue(driver.findElement(By.xpath("//*[local-name() = 'text'][@x='8']")).getText().contains(line),
-                "The tooltip text is wrong expected "+line+" but found "+driver.findElement(By.xpath("//*[local-name() = 'text'][@x='8']")).getText());
+                "The tooltip text is wrong expected " + line + " but found " + driver.findElement(By.xpath("//*[local-name() = 'text'][@x='8']")).getText());
         //main test
-        int i =1;
-        while (i<pathForHighsoftEmployeeGraph.size()&&(line = reader.readLine()) != null) {
+        int i = 1;
+        while (i < pathForHighsoftEmployeeGraph.size() && (line = reader.readLine()) != null) {
             ac.moveToElement(boxForHighsoftGraph).moveToElement(pathForHighsoftEmployeeGraph.get(i)).perform();
             i++;
             Assert.assertTrue(driver.findElement(By.xpath("//*[local-name() = 'text'][@x='8']")).getText().contains(line),
-                    "The tooltip text is wrong expected "+line+" but found "+driver.findElement(By.xpath("//*[local-name() = 'text'][@x='8']")).getText());
+                    "The tooltip text is wrong expected " + line + " but found " + driver.findElement(By.xpath("//*[local-name() = 'text'][@x='8']")).getText());
         }
 
     }

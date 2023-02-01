@@ -41,5 +41,11 @@ public class BasePage {
     public void magickWaiter(long timeToWait) throws InterruptedException {
     Thread.sleep(timeToWait);
     }
-
+    public void clickOnElement(WebElement webElement){//this one breaking next buttons click
+        try{
+            webElement.click();}catch(Exception e){
+            JavascriptExecutor executor =(JavascriptExecutor) driver;
+            executor.executeScript("arguments[0].click();",webElement);
+        }
+    }
 }

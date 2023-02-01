@@ -29,6 +29,7 @@ public class RunnerTests extends AbstractTestNGCucumberTests {
         capability.setCapability(CapabilityType.BROWSER_NAME, browser);
         capability.setCapability(CapabilityType.VERSION, version);
         capability.setCapability(CapabilityType.PLATFORM, platform);
+
     }
 
     @DataProvider

@@ -16,7 +16,6 @@ import java.io.IOException;
 import static io.github.bonigarcia.wdm.WebDriverManager.chromedriver;
 
 public class DefinitionSteps extends RunnerTests {
-    private static final long DEFAULT_TIMEOUT = 60;
     WebDriver driver;
     HomePage homePage;
     PageFactoryManager pageFactoryManager;
@@ -29,17 +28,13 @@ public class DefinitionSteps extends RunnerTests {
         pageFactoryManager = new PageFactoryManager(driver);
     }
 
-    // @Given("I use {string}")
-    //public void iUse(String browser) {
-    //    driver = WebDriverManager.getInstance(browser).create();
-    // }
     @After
     public void tearDown() {
         driver.quit();
     }
 
     @And("User opens {string} page")
-    public void openPage(final String url) throws InterruptedException {
+    public void openPage(final String url)  {
         homePage = pageFactoryManager.getHomePage();
         homePage.openHomePage(url);
     }
@@ -55,7 +50,7 @@ public class DefinitionSteps extends RunnerTests {
     }
 
     @Then("User checks tooltip")
-    public void userChecksTooltipText() throws InterruptedException, IOException {
+    public void userChecksTooltipText() throws  IOException {
         homePage.checkTooltip();
     }
 }
