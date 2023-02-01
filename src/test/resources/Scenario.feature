@@ -5,7 +5,7 @@ Feature: Just open home page
     Given User opens '<homePage>' page
     When User clicking button below graph with name Google search for highcharts
     And User clicking button next to it with name Revenue
-    Then User checks tooltip '<text>'
+    Then User checks tooltip
     Examples:
-      | homePage                                       | text  |
-      | https://www.highcharts.com/demo/combo-timeline | Anita |
+      | homePage                                       |
+      | https://www.highcharts.com/demo/combo-timeline |

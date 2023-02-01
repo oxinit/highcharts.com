@@ -54,9 +54,9 @@ public class DefinitionSteps extends RunnerTests {
         homePage.clickSecondGraphsButton();
     }
 
-    @Then("User checks tooltip {string}")
-    public void userChecksTooltipText(final String text) throws InterruptedException, IOException {
-        homePage.checkTooltip(text);
+    @Then("User checks tooltip")
+    public void userChecksTooltipText() throws InterruptedException, IOException {
+        homePage.checkTooltip();
     }
 }
 
