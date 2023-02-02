@@ -30,7 +30,7 @@ public class HomePage extends BasePage {
     private WebElement cookiePopUpDialog;
     @FindBy(xpath = "//*[local-name() = 'g'][contains(@class,'highcharts-markers')][contains(@aria-label,'Highsoft')]")
     private WebElement boxForHighsoftGraph;
-
+    String tooltipForGraphsElements="//*[local-name() = 'text'][@x='8']";
     public HomePage(WebDriver driver) {
         super(driver);
     }
@@ -64,17 +64,16 @@ public class HomePage extends BasePage {
         ac.moveToElement(boxForHighsoftGraph)
                 .moveToElement(boxForHighsoftGraph, -400, 50).perform();
         line = reader.readLine();
-        Assert.assertTrue(driver.findElement(By.xpath("//*[local-name() = 'text'][@x='8']")).getText().contains(line),
-                "The tooltip text is wrong expected " + line + " but found " + driver.findElement(By.xpath("//*[local-name() = 'text'][@x='8']")).getText());
+        Assert.assertTrue(driver.findElement(By.xpath(tooltipForGraphsElements)).getText().contains(line),
+                "The tooltip text is wrong expected " + line + " but found " + driver.findElement(By.xpath(tooltipForGraphsElements)).getText());
         //main test
         int i = 1;
         while (i < pathForHighsoftEmployeeGraph.size() && (line = reader.readLine()) != null) {
             ac
-
                     .moveToElement(pathForHighsoftEmployeeGraph.get(i)).perform();
             i++;
-            Assert.assertTrue(driver.findElement(By.xpath("//*[local-name() = 'text'][@x='8']")).getText().contains(line),
-                    "The tooltip text is wrong expected " + line + " but found " + driver.findElement(By.xpath("//*[local-name() = 'text'][@x='8']")).getText());
+            Assert.assertTrue(driver.findElement(By.xpath(tooltipForGraphsElements)).getText().contains(line),
+                    "The tooltip text is wrong expected " + line + " but found " + driver.findElement(By.xpath(tooltipForGraphsElements)).getText());
         }
 
     }
