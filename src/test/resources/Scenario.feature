@@ -1,6 +1,6 @@
 Feature: Just open home page
 
-  Scenario Outline: User opens home page and checks does site address correct
+  Scenario Outline: User opens home page and checks toltips at graph has a text
 
     Given User opens '<homePage>' page
     When User clicking button below graph with name Google search for highcharts
