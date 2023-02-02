@@ -69,7 +69,9 @@ public class HomePage extends BasePage {
         //main test
         int i = 1;
         while (i < pathForHighsoftEmployeeGraph.size() && (line = reader.readLine()) != null) {
-            ac.moveToElement(boxForHighsoftGraph).moveToElement(pathForHighsoftEmployeeGraph.get(i)).perform();
+            ac
+
+                    .moveToElement(pathForHighsoftEmployeeGraph.get(i)).perform();
             i++;
             Assert.assertTrue(driver.findElement(By.xpath("//*[local-name() = 'text'][@x='8']")).getText().contains(line),
                     "The tooltip text is wrong expected " + line + " but found " + driver.findElement(By.xpath("//*[local-name() = 'text'][@x='8']")).getText());
