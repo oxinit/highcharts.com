@@ -9,7 +9,6 @@ import pages.BasePage;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.util.List;
 
 public class WriterForToolTipSpanTextForGraphCoordinate extends BasePage {
@@ -29,9 +28,10 @@ public class WriterForToolTipSpanTextForGraphCoordinate extends BasePage {
     @FindBy(xpath = "//*[local-name() = 'g'][contains(@class,'highcharts-markers')][contains(@aria-label,'Highsoft')]")
     private WebElement boxForHighsoftGraph;
 
-    public WriterForToolTipSpanTextForGraphCoordinate(WebDriver driver) throws IOException {
+    public WriterForToolTipSpanTextForGraphCoordinate(WebDriver driver)  {
         super(driver);
-        BufferedWriter writer = new BufferedWriter(new FileWriter("tooltipSpanTextForGraphCoordinate"));
+     try (BufferedWriter writer = new BufferedWriter(new FileWriter("src/test/resources/tooltipSpanTextForGraphCoordinate")))
+     {
         Actions ac = new Actions(driver);
         ac.moveToElement(boxForHighsoftGraph)
                 .moveToElement(boxForHighsoftGraph, -400, 50).perform();
@@ -42,7 +42,6 @@ public class WriterForToolTipSpanTextForGraphCoordinate extends BasePage {
             i++;
             writer.write(driver.findElement(By.xpath("//*[local-name() = 'text'][@x='8']")).getText() + "\n");
 
-        }
-        writer.close();
+        }}catch (Exception e){ e.printStackTrace();}
     }
 }

@@ -1,7 +1,5 @@
 package stepdefinitions;
 
-import pages.HomePage;
-import TestngCucumberRunner.RunnerTests;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
@@ -10,8 +8,8 @@ import io.cucumber.java.en.When;
 import manager.PageFactoryManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-import java.io.IOException;
+import pages.HomePage;
+import testngcucumberrunner.RunnerTests;
 
 import static io.github.bonigarcia.wdm.WebDriverManager.chromedriver;
 
@@ -49,8 +47,8 @@ public class DefinitionSteps extends RunnerTests {
         homePage.clickSecondGraphsButton();
     }
 
-    @Then("User checks tooltip")
-    public void userChecksTooltipText() throws  IOException {
+    @Then("User checks tooltips")
+    public void userChecksTooltipText(){
         homePage.checkTooltip();
     }
 }

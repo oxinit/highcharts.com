@@ -1,4 +1,4 @@
-package TestngCucumberRunner;
+package testngcucumberrunner;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
@@ -11,7 +11,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 
 @CucumberOptions(
-        features = "src/test/resources/Scenario.feature",
+        features = "src/test/resources/features/Scenario.feature",
         glue = {"stepdefinitions"},
         plugin = "json:target/cucumber-reports/CucumberTestReport.json")
 public class RunnerTests extends AbstractTestNGCucumberTests {
