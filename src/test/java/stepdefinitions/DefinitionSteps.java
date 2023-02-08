@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import com.opencsv.exceptions.CsvException;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
@@ -10,6 +11,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pages.HomePage;
 import testngcucumberrunner.RunnerTests;
+
+import java.io.IOException;
 
 import static io.github.bonigarcia.wdm.WebDriverManager.chromedriver;
 
@@ -48,7 +51,7 @@ public class DefinitionSteps extends RunnerTests {
     }
 
     @Then("User checks tooltips")
-    public void userChecksTooltipText(){
+    public void userChecksTooltipText() throws IOException, CsvException {
         homePage.checkTooltip();
     }
 }
