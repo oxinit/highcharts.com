@@ -1,13 +1,11 @@
 package util;
 
-import com.opencsv.CSVReader;
-import com.opencsv.CSVReaderBuilder;
+import com.opencsv.bean.CsvToBeanBuilder;
 import com.opencsv.exceptions.CsvException;
 import util.model.TipForEmployee;
 
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class OpenCSVReader{
@@ -18,22 +16,11 @@ public class OpenCSVReader{
     }
 }
     public static List<TipForEmployee> readFromCSVWithOpenCSV(String fileName) throws IOException, CsvException {
-        List<TipForEmployee> tips = new ArrayList<>();
 
-        CSVReader reader = new CSVReaderBuilder(new FileReader(fileName)).build();
-        String[] nextLine ;
-        while ((nextLine= reader.readNext()) != null) {
-            System.out.println(nextLine[0] + nextLine[1] + nextLine[2]);
-            TipForEmployee tip = createTipForEmployee(nextLine);
-            tips.add(tip);
-        }
+        List<TipForEmployee> tips = new CsvToBeanBuilder<TipForEmployee>(new FileReader(fileName))
+                .withType(TipForEmployee.class)
+                .build().parse();
         return tips;
     }
-    private static TipForEmployee createTipForEmployee(String[] metadata) {
-        String date = metadata[0];
-        String name = metadata[1];
-        String amount = metadata[2];
 
-        return new TipForEmployee(date, name, amount);
-    }
 }

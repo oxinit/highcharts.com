@@ -67,22 +67,21 @@ public class HomePage extends BasePage {
         ac.moveToElement(boxForHighsoftGraph)
                 .moveToElement(boxForHighsoftGraph, -400, 50).perform();
         Assert.assertTrue(driver.findElement(By.xpath(tooltipForGraphsElements)).getText()
-                        .contains(tooltips.get(1).getEmployeeNameAndStatus()),
+                        .contains(tooltips.get(0).getEmployeeNameAndStatus()),
                 "The tooltip text is wrong expected " + tooltips.get(1).getEmployeeNameAndStatus() + " but found " + driver.findElement(By.xpath(tooltipForGraphsElements)).getText());
         int i = 1;
-        int j= 2;
-        while (j < tooltips.size()){
+        while (i < tooltips.size()){
 
         ac.moveToElement(pathForHighsoftEmployeeGraph.get(i)).perform();
 
         Assert.assertTrue(driver.findElement(By.xpath(tooltipForGraphsElements)).getText()
-                        .contains(tooltips.get(j).getEmployeeNameAndStatus())&&
+                        .contains(tooltips.get(i).getEmployeeNameAndStatus())&&
                         driver.findElement(By.xpath(tooltipForGraphsElements)).getText()
-                                .contains(tooltips.get(j).getDate()),
-                "The tooltip text is wrong expected " + tooltips.get(j).getEmployeeNameAndStatus() + " but found " + driver
+                                .contains(tooltips.get(i).getDate()),
+                "The tooltip text is wrong expected " + tooltips.get(i).getEmployeeNameAndStatus() + " but found " + driver
                         .findElement(By.xpath(tooltipForGraphsElements)).getText());
             i++;
-            j++;
+
         }
     }
 }

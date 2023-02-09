@@ -34,23 +34,23 @@ public class DefinitionSteps extends RunnerTests {
         driver.quit();
     }
 
-    @And("User opens {string} page")
+    @And("User open {string} page")
     public void openPage(final String url)  {
         homePage = pageFactoryManager.getHomePage();
         homePage.openHomePage(url);
     }
 
-    @When("User clicking button below graph with name Google search for highcharts")
+    @When("User click button below graph with name Google search for highcharts")
     public void userClickingButtonBelowGraphWithNameGoogleSearchForHighcharts()  {
         homePage.clickFirstGraphsButton();
     }
 
-    @And("User clicking button next to it with name Revenue")
+    @And("User click button next to it with name Revenue")
     public void userClickingButtonToItWithNameRevenue() {
         homePage.clickSecondGraphsButton();
     }
 
-    @Then("User checks tooltips")
+    @Then("User check tooltips")
     public void userChecksTooltipText() throws IOException, CsvException {
         homePage.checkTooltip();
     }

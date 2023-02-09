@@ -1,46 +1,45 @@
 package util.model;
 
+import com.opencsv.bean.CsvBindByName;
+
 public class TipForEmployee {
-    String date;
-    String employeeNameAndStatus;
-    String totalEmployees;
-    public TipForEmployee(String date, String employeeNameAndStatus, String totalEmployees) {
+    @CsvBindByName
+   private String date;
+    @CsvBindByName(column = "name and status")
+   private String nameandstatus;
+    @CsvBindByName
+   private String quantity;
+
+    public TipForEmployee(String date, String nameandstatus, String quantity) {
         this.date = date;
-        this.employeeNameAndStatus = employeeNameAndStatus;
-        this.totalEmployees = totalEmployees;
+        this.nameandstatus = nameandstatus;
+        this.quantity = quantity;
     }
+
+    public TipForEmployee() {
+
+    }
+
     public void setDate(String date) {
         this.date = date;
     }
-
-    public void setEmployeeNameAndStatus(String employeeNameAndStatus) {
-        this.employeeNameAndStatus = employeeNameAndStatus;
-    }
-
-    public void setTotalEmployees(String totalEmployees) {
-        this.totalEmployees = totalEmployees;
-    }
-
-
 
     public String getDate() {
         return date;
     }
 
     public String getEmployeeNameAndStatus() {
-        return employeeNameAndStatus;
+        return nameandstatus;
     }
 
-    public String getTotalEmployees() {
-        return totalEmployees;
-    }
+
 
     @Override
     public String toString() {
         return "TipForEmployee{" +
                 "date='" + date + '\'' +
-                ", employeeNameAndStatus='" + employeeNameAndStatus + '\'' +
-                ", totalEmployees='" + totalEmployees + '\'' +
+                ", employeeNameAndStatus='" + nameandstatus + '\'' +
+                ", totalEmployees='" + quantity + '\'' +
                 '}';
     }
 }
