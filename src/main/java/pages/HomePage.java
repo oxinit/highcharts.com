@@ -1,21 +1,17 @@
 package pages;
 
-import com.opencsv.exceptions.CsvException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import util.model.TipForEmployee;
 
 import java.io.IOException;
-import java.time.Duration;
 import java.util.List;
 
-import static util.OpenCSVReader.readFromCSVWithOpenCSV;
+import static util.OpenCSVReader.readFromCSV;
 
 public class HomePage extends BasePage {
     @FindBy(css = "a[id='CybotCookiebotDialogBodyButtonAccept']")
@@ -32,21 +28,16 @@ public class HomePage extends BasePage {
     private WebElement cookiePopUpDialog;
     @FindBy(xpath = "//*[local-name() = 'g'][contains(@class,'highcharts-markers')][contains(@aria-label,'Highsoft')]")
     private WebElement boxForHighsoftGraph;
-    String tooltipForGraphsElements="//*[local-name() = 'text'][@x='8']";
+    String tooltipForGraphsElements = "//*[local-name() = 'text'][@x='8']";
+
     public HomePage(WebDriver driver) {
         super(driver);
     }
 
-    public void openHomePage(String url)  {
+    public void openHomePage(String url) {
         driver.get(url);
-        try {
-            new WebDriverWait(driver, Duration.ofSeconds(4))
-                    .until(ExpectedConditions
-                            .elementToBeSelected(cookiePopUpDialog));
-            //this condition never pass so we click on cookie after wait
-        } catch (Exception e) {
-            cookie.click();
-        }
+        clickOnElement(cookie);
+
     }
 
     public void clickFirstGraphsButton() {
@@ -58,30 +49,32 @@ public class HomePage extends BasePage {
         graphsButtons.get(1).click();
     }
 
-    public void checkTooltip() throws IOException, CsvException {
-            //To handle the error of missing lines you can add try-catch block,
-             //and in the catch block please add a throw of an exception,
-             //something like this:throw new Exception("Some text about missing lines")
-        List<TipForEmployee> tooltips = readFromCSVWithOpenCSV("src/test/resources/tooltips_expected_values.csv");
+    public void checkTooltip() throws IOException {
+        List<TipForEmployee> tooltips = readFromCSV("src/test/resources/tooltips_expected_values.csv");
+        final int FIRST_ELEMENT = 0;
         Actions ac = new Actions(driver);
         ac.moveToElement(boxForHighsoftGraph)
                 .moveToElement(boxForHighsoftGraph, -400, 50).perform();
         Assert.assertTrue(driver.findElement(By.xpath(tooltipForGraphsElements)).getText()
-                        .contains(tooltips.get(0).getEmployeeNameAndStatus()),
-                "The tooltip text is wrong expected " + tooltips.get(1).getEmployeeNameAndStatus() + " but found " + driver.findElement(By.xpath(tooltipForGraphsElements)).getText());
+                        .contains(tooltips.get(FIRST_ELEMENT).getDate())
+                        && driver.findElement(By.xpath(tooltipForGraphsElements)).getText()
+                        .contains(tooltips.get(FIRST_ELEMENT).getEmployeeNameAndStatus())
+                        && driver.findElement(By.xpath(tooltipForGraphsElements)).getText()
+                        .contains(tooltips.get(FIRST_ELEMENT).getQuantity()),
+                "The tooltip text is wrong expected " + tooltips.get(FIRST_ELEMENT).getEmployeeNameAndStatus() +
+                        " but found " + driver.findElement(By.xpath(tooltipForGraphsElements)).getText());
         int i = 1;
-        while (i < tooltips.size()){
-
-        ac.moveToElement(pathForHighsoftEmployeeGraph.get(i)).perform();
-
-        Assert.assertTrue(driver.findElement(By.xpath(tooltipForGraphsElements)).getText()
-                        .contains(tooltips.get(i).getEmployeeNameAndStatus())&&
-                        driver.findElement(By.xpath(tooltipForGraphsElements)).getText()
-                                .contains(tooltips.get(i).getDate()),
-                "The tooltip text is wrong expected " + tooltips.get(i).getEmployeeNameAndStatus() + " but found " + driver
-                        .findElement(By.xpath(tooltipForGraphsElements)).getText());
+        while (i < tooltips.size()) {
+            ac.moveToElement(pathForHighsoftEmployeeGraph.get(i)).perform();
+            Assert.assertTrue(driver.findElement(By.xpath(tooltipForGraphsElements)).getText()
+                            .contains(tooltips.get(i).getDate())
+                            && driver.findElement(By.xpath(tooltipForGraphsElements)).getText()
+                            .contains(tooltips.get(i).getEmployeeNameAndStatus())
+                            && driver.findElement(By.xpath(tooltipForGraphsElements)).getText()
+                            .contains(tooltips.get(i).getQuantity()),
+                    "The tooltip text is wrong expected " + tooltips.get(i).getEmployeeNameAndStatus() +
+                            " but found " + driver.findElement(By.xpath(tooltipForGraphsElements)).getText());
             i++;
-
         }
     }
 }

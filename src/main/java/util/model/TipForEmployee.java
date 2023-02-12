@@ -10,6 +10,8 @@ public class TipForEmployee {
     @CsvBindByName
    private String quantity;
 
+
+
     public TipForEmployee(String date, String nameandstatus, String quantity) {
         this.date = date;
         this.nameandstatus = nameandstatus;
@@ -31,7 +33,9 @@ public class TipForEmployee {
     public String getEmployeeNameAndStatus() {
         return nameandstatus;
     }
-
+    public String getQuantity() {
+        return quantity;
+    }
 
 
     @Override

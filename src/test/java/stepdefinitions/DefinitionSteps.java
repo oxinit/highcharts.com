@@ -1,6 +1,5 @@
 package stepdefinitions;
 
-import com.opencsv.exceptions.CsvException;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
@@ -45,13 +44,13 @@ public class DefinitionSteps extends RunnerTests {
         homePage.clickFirstGraphsButton();
     }
 
-    @And("User click button next to it with name Revenue")
+    @And("User click button with name Revenue")
     public void userClickingButtonToItWithNameRevenue() {
         homePage.clickSecondGraphsButton();
     }
 
     @Then("User check tooltips")
-    public void userChecksTooltipText() throws IOException, CsvException {
+    public void userChecksTooltipText() throws  IOException {
         homePage.checkTooltip();
     }
 }
