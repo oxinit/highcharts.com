@@ -78,7 +78,7 @@ fabric.properties
 
 highchats.com.iml
 tooltipSpanTextForGraphCoordinate
-**/CSVReaderHandmade.java
+
 
 **/*.idea
 **/*target/
