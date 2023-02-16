@@ -23,13 +23,10 @@ public class RunnerTests extends AbstractTestNGCucumberTests {
     }
 
     @BeforeMethod(alwaysRun = true)
-    @Parameters({"browser", "version", "platform"})
+    @Parameters({"browser"})
     public void setUpClass(String browser, String version, String platform){
         DesiredCapabilities capability = new DesiredCapabilities();
         capability.setCapability(CapabilityType.BROWSER_NAME, browser);
-        capability.setCapability(CapabilityType.VERSION, version);
-        capability.setCapability(CapabilityType.PLATFORM, platform);
-
     }
 
     @DataProvider

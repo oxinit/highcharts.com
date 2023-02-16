@@ -1,20 +1,29 @@
 package util.model;
 
-import com.opencsv.bean.CsvBindByName;
+import com.opencsv.bean.CsvBindByPosition;
+import com.opencsv.bean.CsvDate;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class TipForEmployee {
-    @CsvBindByName
-   private String date;
-    @CsvBindByName(column = "name and status")
-   private String nameandstatus;
-    @CsvBindByName
+  //  @CsvBindByName(column = "Highsoft employees (x)")
+  @CsvDate(value = "yyyy-MM-dd")
+    @CsvBindByPosition(position = 1)
+    private Date date;
+ //   @CsvBindByName(column = "DateTime")
+    @CsvBindByPosition(position = 0)
+   private String nameAndStatus;
+ //   @CsvBindByName(column = "Highsoft employees (y)")
+    @CsvBindByPosition(position = 2)
    private String quantity;
 
 
 
-    public TipForEmployee(String date, String nameandstatus, String quantity) {
+    public TipForEmployee(Date date, String nameAndStatus, String quantity) {
         this.date = date;
-        this.nameandstatus = nameandstatus;
+        this.nameAndStatus = nameAndStatus;
         this.quantity = quantity;
     }
 
@@ -22,16 +31,11 @@ public class TipForEmployee {
 
     }
 
-    public void setDate(String date) {
-        this.date = date;
-    }
-
     public String getDate() {
-        return date;
-    }
-
+        DateFormat dateFormat = new SimpleDateFormat("MMMM d, YYYY");
+        return   dateFormat.format(date);}
     public String getEmployeeNameAndStatus() {
-        return nameandstatus;
+        return nameAndStatus;
     }
     public String getQuantity() {
         return quantity;
@@ -41,8 +45,8 @@ public class TipForEmployee {
     @Override
     public String toString() {
         return "TipForEmployee{" +
-                "date='" + date + '\'' +
-                ", employeeNameAndStatus='" + nameandstatus + '\'' +
+                "date='" + getDate() + '\'' +
+                ", employeeNameAndStatus='" + nameAndStatus + '\'' +
                 ", totalEmployees='" + quantity + '\'' +
                 '}';
     }

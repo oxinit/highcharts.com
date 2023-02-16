@@ -5,10 +5,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import util.model.TipForEmployee;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 
 import static util.OpenCSVReader.readFromCSV;
@@ -28,29 +31,39 @@ public class HomePage extends BasePage {
     private WebElement cookiePopUpDialog;
     @FindBy(xpath = "//*[local-name() = 'g'][contains(@class,'highcharts-markers')][contains(@aria-label,'Highsoft')]")
     private WebElement boxForHighsoftGraph;
-    String tooltipForGraphsElements = "//*[local-name() = 'text'][@x='8']";
+    @FindBy(xpath="//*[contains(@class,'highcharts-exporting-group')]")
+    private WebElement chartContextMenu;
+    @FindBy(xpath="//*[text()='Download CSV']")
+    private WebElement downloadCsvButton;
 
     public HomePage(WebDriver driver) {
         super(driver);
     }
-
-    public void openHomePage(String url) {
+    String tooltipForGraphsElements = "//*[local-name() = 'text'][@x='8']";
+    public void openHomePage(String url)  {
         driver.get(url);
-        clickOnElement(cookie);
-
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(3))
+                    .until(ExpectedConditions
+                            .elementToBeSelected(cookiePopUpDialog));
+            //this condition never pass so we click on cookie after wait
+        } catch (Exception e) {
+            cookie.click();
+        }
+        // clickOnElement(cookie);
     }
-
-    public void clickFirstGraphsButton() {
-        graphsButtons.get(0).click();
-
-    }
-
+    public void clickFirstGraphsButton() {graphsButtons.get(0).click();}
     public void clickSecondGraphsButton() {
         graphsButtons.get(1).click();
     }
+    public void clickChartContextMenu() {
+        new Actions(driver).click(chartContextMenu).perform();
+        }
+    public void clickDownloadCsvButton() {
+        downloadCsvButton.click();}
 
     public void checkTooltip() throws IOException {
-        List<TipForEmployee> tooltips = readFromCSV("src/test/resources/tooltips_expected_values.csv");
+        List<TipForEmployee> tooltips = readFromCSV("src/test/resources/highcharts-and-highsoft.csv");
         final int FIRST_ELEMENT = 0;
         Actions ac = new Actions(driver);
         ac.moveToElement(boxForHighsoftGraph)
