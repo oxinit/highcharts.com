@@ -5,13 +5,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import util.model.TipForEmployee;
 
 import java.io.IOException;
-import java.time.Duration;
 import java.util.List;
 
 import static util.OpenCSVReader.readFromCSV;
@@ -42,15 +39,7 @@ public class HomePage extends BasePage {
     String tooltipForGraphsElements = "//*[local-name() = 'text'][@x='8']";
     public void openHomePage(String url)  {
         driver.get(url);
-        try {
-            new WebDriverWait(driver, Duration.ofSeconds(3))
-                    .until(ExpectedConditions
-                            .elementToBeSelected(cookiePopUpDialog));
-            //this condition never pass so we click on cookie after wait
-        } catch (Exception e) {
-            cookie.click();
-        }
-        // clickOnElement(cookie);
+         clickOnElement(cookie);
     }
     public void clickFirstGraphsButton() {graphsButtons.get(0).click();}
     public void clickSecondGraphsButton() {
@@ -74,7 +63,9 @@ public class HomePage extends BasePage {
                         .contains(tooltips.get(FIRST_ELEMENT).getEmployeeNameAndStatus())
                         && driver.findElement(By.xpath(tooltipForGraphsElements)).getText()
                         .contains(tooltips.get(FIRST_ELEMENT).getQuantity()),
-                "The tooltip text is wrong expected " + tooltips.get(FIRST_ELEMENT).getEmployeeNameAndStatus() +
+                "The tooltip text is wrong expected= " + tooltips.get(FIRST_ELEMENT).getEmployeeNameAndStatus()
+                        + tooltips.get(FIRST_ELEMENT).getDate()
+                        + tooltips.get(FIRST_ELEMENT).getQuantity()+
                         " but found " + driver.findElement(By.xpath(tooltipForGraphsElements)).getText());
         int i = 1;
         while (i < tooltips.size()) {
@@ -85,7 +76,9 @@ public class HomePage extends BasePage {
                             .contains(tooltips.get(i).getEmployeeNameAndStatus())
                             && driver.findElement(By.xpath(tooltipForGraphsElements)).getText()
                             .contains(tooltips.get(i).getQuantity()),
-                    "The tooltip text is wrong expected " + tooltips.get(i).getEmployeeNameAndStatus() +
+                    "The tooltip text is wrong expected " + tooltips.get(i).getEmployeeNameAndStatus()
+                            + tooltips.get(FIRST_ELEMENT).getDate()
+                            + tooltips.get(FIRST_ELEMENT).getQuantity()+
                             " but found " + driver.findElement(By.xpath(tooltipForGraphsElements)).getText());
             i++;
         }
