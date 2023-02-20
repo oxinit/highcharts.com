@@ -7,7 +7,6 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import manager.PageFactoryManager;
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import pages.HomePage;
@@ -24,12 +23,8 @@ public class DefinitionSteps extends RunnerTests {
     PageFactoryManager pageFactoryManager;
 
     @Before
-    public void testsSetUp() throws IOException {
+    public void testsSetUp() {
 
-        FileUtils.cleanDirectory(new File(System.getProperty("user.dir")+ File.separator + "src" +
-                File.separator + "test"+
-                File.separator + "resources"+
-                File.separator + "tempcsv"));
         Map<String, Object> prefs = new HashMap<String, Object>();
         prefs.put("download.default_directory",  System.getProperty("user.dir")+ File.separator + "src" +
                 File.separator + "test"+
@@ -38,6 +33,7 @@ public class DefinitionSteps extends RunnerTests {
         ChromeOptions options = new ChromeOptions();
         options.setExperimentalOption("prefs", prefs);
         String browser="chrome";
+
         driver = WebDriverManager.getInstance(browser).capabilities(options).create() ;
         driver.manage().window().maximize();
         pageFactoryManager = new PageFactoryManager(driver);
@@ -49,9 +45,11 @@ public class DefinitionSteps extends RunnerTests {
     }
 
     @And("User open {string} page")
-    public void openPage(final String url) throws InterruptedException {
+    public void openPage(final String url) throws IOException {
         homePage = pageFactoryManager.getHomePage();
         homePage.openHomePage(url);
+        homePage.cleanTempCsvFolder();
+        //clear folder must be before file opened
     }
 
     @When("User click button below graph with name Google search for highcharts")
@@ -65,18 +63,23 @@ public class DefinitionSteps extends RunnerTests {
     }
 
     @Then("User check tooltips")
-    public void userChecksTooltipText() throws IOException, InterruptedException {
+    public void userChecksTooltipText() throws IOException {
         homePage.checkTooltip();
     }
 
     @And("User click on graph menu button")
-    public void userClickOnGraphMenuButton() throws InterruptedException {
+    public void userClickOnGraphMenuButton()  {
         homePage.clickChartContextMenu();
     }
 
     @And("User click download as csv file")
     public void userClickDownloadAsCsvFile()  {
         homePage.clickDownloadCsvButton();
+    }
+
+    @And("User check does downloaded csv has expected values")
+    public void userChecksCsvHasExpectedValues() throws IOException {
+        homePage.compareTwoDifferentCSV();
     }
 }
 

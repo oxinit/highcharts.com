@@ -2,17 +2,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="BDD Test Suite" verbose="1" parallel="tests"
        thread-count="3" >
-    <test name="FIREFOX" annotations="JDK">
-        <parameter name="browser" value="Firefox"/>
+    <test name="MainScenario" annotations="JDK">
+        <classes>
+            <class name="testngcucumberrunner.RunnerTests" />
+        </classes>
+    </test> <!-- Test -->
 
-        <classes>
-            <class name="testngcucumberrunner.RunnerTests" />
-        </classes>
-    </test> <!-- Test -->
-    <test name="CHROME" annotations="JDK">
-        <parameter name="browser" value="chrome"/>
-        <classes>
-            <class name="testngcucumberrunner.RunnerTests" />
-        </classes>
-    </test> <!-- Test -->
 </suite>

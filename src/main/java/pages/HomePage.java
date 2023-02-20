@@ -8,13 +8,13 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.asserts.SoftAssert;
-import util.model.TipForEmployee;
+import util.model.TooltipEmployeeForExpectedValue;
 
 import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
 
-import static util.OpenCSVReader.readFromCSV;
+import static util.OpenCSVReader.readFromCSVExpectedValue;
 
 public class HomePage extends BasePage {
     @FindBy(css = "a[id='CybotCookiebotDialogBodyButtonAccept']")
@@ -41,7 +41,7 @@ public class HomePage extends BasePage {
     }
     String tooltipForGraphsElements = "//*[local-name() = 'text'][@x='8']";
     public void openHomePage(String url)  {
-        driver.get(url);
+     driver.get(url);
         try {
             new WebDriverWait(driver, Duration.ofSeconds(3))
                     .until(ExpectedConditions
@@ -50,8 +50,6 @@ public class HomePage extends BasePage {
         } catch (Exception e) {
             cookie.click();
         }
-
-        //clickOnElement(cookie);
     }
     public void clickFirstGraphsButton() {graphsButtons.get(0).click();}
     public void clickSecondGraphsButton() {
@@ -63,30 +61,29 @@ public class HomePage extends BasePage {
     public void clickDownloadCsvButton() {
         downloadCsvButton.click();}
 
-    public void checkTooltip() throws IOException, InterruptedException {
-        Thread.sleep(1000);
-        List<TipForEmployee> tooltips = readFromCSV("src/test/resources/tempcsv/highcharts-and-highsoft.csv");
+    public void checkTooltip() throws IOException {
+        List<TooltipEmployeeForExpectedValue> tooltips = readFromCSVExpectedValue("src/test/resources/tooltips_expected_values.csv");
         final int FIRST_ELEMENT = 0;
         SoftAssert softAssert = new SoftAssert();
         Actions ac = new Actions(driver);
         ac.moveToElement(boxForHighsoftGraph)
                 .moveToElement(boxForHighsoftGraph, -400, 50).perform();
                 softAssert.assertTrue(driver.findElement(By.xpath(tooltipForGraphsElements)).getText()
-                        .contains(tooltips.get(FIRST_ELEMENT).getDateAsString())
+                        .contains(tooltips.get(FIRST_ELEMENT).getDate())
                         && driver.findElement(By.xpath(tooltipForGraphsElements)).getText()
                         .contains(tooltips.get(FIRST_ELEMENT).getEmployeeNameAndStatus())
                         && driver.findElement(By.xpath(tooltipForGraphsElements)).getText()
                         .contains(tooltips.get(FIRST_ELEMENT).getQuantity()),
                 "The tooltip text is wrong expected= "
                         + tooltips.get(FIRST_ELEMENT).getEmployeeNameAndStatus()+' '
-                        + tooltips.get(FIRST_ELEMENT).getDateAsString()+' '
+                        + tooltips.get(FIRST_ELEMENT).getDate()+' '
                         + tooltips.get(FIRST_ELEMENT).getQuantity()+' '
                         +" but found " + driver.findElement(By.xpath(tooltipForGraphsElements)).getText());
         int i = 1;
         while (i < tooltips.size()) {
             ac.moveToElement(pathForHighsoftEmployeeGraph.get(i)).perform();
             softAssert.assertTrue(driver.findElement(By.xpath(tooltipForGraphsElements)).getText()
-                            .contains(tooltips.get(i).getDateAsString())
+                            .contains(tooltips.get(i).getDate())
                             && driver.findElement(By.xpath(tooltipForGraphsElements)).getText()
                             .contains(tooltips.get(i).getEmployeeNameAndStatus())
                             && driver.findElement(By.xpath(tooltipForGraphsElements)).getText()
@@ -100,4 +97,5 @@ public class HomePage extends BasePage {
         }
         softAssert.assertAll();
     }
+
 }
