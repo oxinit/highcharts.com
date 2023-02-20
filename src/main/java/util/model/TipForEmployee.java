@@ -8,18 +8,13 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class TipForEmployee {
-  //  @CsvBindByName(column = "Highsoft employees (x)")
-  @CsvDate(value = "yyyy-MM-dd")
+    @CsvDate(value = "yyyy-MM-dd")
     @CsvBindByPosition(position = 1)
     private Date date;
- //   @CsvBindByName(column = "DateTime")
     @CsvBindByPosition(position = 0)
-   private String nameAndStatus;
- //   @CsvBindByName(column = "Highsoft employees (y)")
+    private String nameAndStatus;
     @CsvBindByPosition(position = 2)
-   private String quantity;
-
-
+    private String quantity;
 
     public TipForEmployee(Date date, String nameAndStatus, String quantity) {
         this.date = date;
@@ -31,23 +26,26 @@ public class TipForEmployee {
 
     }
 
-    public String getDate() {
+    public String getDateAsString() {
         DateFormat dateFormat = new SimpleDateFormat("MMMM d, YYYY");
-        return   dateFormat.format(date);}
+        return dateFormat.format(date);
+    }
+    public Date getDate() {
+        return date;
+    }
     public String getEmployeeNameAndStatus() {
         return nameAndStatus;
     }
+
     public String getQuantity() {
         return quantity;
     }
-
-
     @Override
     public String toString() {
         return "TipForEmployee{" +
-                "date='" + getDate() + '\'' +
-                ", employeeNameAndStatus='" + nameAndStatus + '\'' +
-                ", totalEmployees='" + quantity + '\'' +
+                "date='" + getDateAsString() + '\'' +
+                ", employeeNameAndStatus='" + getEmployeeNameAndStatus() + '\'' +
+                ", totalEmployees='" + getQuantity() + '\'' +
                 '}';
     }
 }

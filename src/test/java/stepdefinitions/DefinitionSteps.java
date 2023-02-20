@@ -7,6 +7,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import manager.PageFactoryManager;
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import pages.HomePage;
@@ -23,12 +24,17 @@ public class DefinitionSteps extends RunnerTests {
     PageFactoryManager pageFactoryManager;
 
     @Before
-    public void testsSetUp() {
+    public void testsSetUp() throws IOException {
 
+        FileUtils.cleanDirectory(new File(System.getProperty("user.dir")+ File.separator + "src" +
+                File.separator + "test"+
+                File.separator + "resources"+
+                File.separator + "tempcsv"));
         Map<String, Object> prefs = new HashMap<String, Object>();
         prefs.put("download.default_directory",  System.getProperty("user.dir")+ File.separator + "src" +
                 File.separator + "test"+
-                File.separator + "resources");
+                File.separator + "resources"+
+                File.separator + "tempcsv");
         ChromeOptions options = new ChromeOptions();
         options.setExperimentalOption("prefs", prefs);
         String browser="chrome";
@@ -59,7 +65,7 @@ public class DefinitionSteps extends RunnerTests {
     }
 
     @Then("User check tooltips")
-    public void userChecksTooltipText() throws  IOException {
+    public void userChecksTooltipText() throws IOException, InterruptedException {
         homePage.checkTooltip();
     }
 

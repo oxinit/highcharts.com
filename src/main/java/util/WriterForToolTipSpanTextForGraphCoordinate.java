@@ -30,7 +30,8 @@ public class WriterForToolTipSpanTextForGraphCoordinate extends BasePage {
 
     public WriterForToolTipSpanTextForGraphCoordinate(WebDriver driver)  {
         super(driver);
-     try (BufferedWriter writer = new BufferedWriter(new FileWriter("src/test/resources/tooltipSpanTextForGraphCoordinate")))
+     try (BufferedWriter writer = new BufferedWriter(new FileWriter
+             ("src/test/resources/tooltipSpanTextForGraphCoordinate")))
      {
         Actions ac = new Actions(driver);
         ac.moveToElement(boxForHighsoftGraph)
