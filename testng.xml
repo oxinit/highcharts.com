@@ -2,10 +2,14 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="BDD Test Suite" verbose="1" parallel="tests"
        thread-count="3" >
+    <listeners>
+        <listener class-name="util.CustomTestListener"></listener>
+        <listener class-name="util.CustomMethodInvokedListener"></listener>
+        <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener" />
+    </listeners>
     <test name="MainScenario" annotations="JDK">
         <classes>
             <class name="testngcucumberrunner.RunnerTests" />
         </classes>
     </test> <!-- Test -->
-
 </suite>

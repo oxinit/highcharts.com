@@ -1,0 +1,280 @@
+2023-03-02 20:40:51[main]INFO  org.testng.internal.Utils -[TestNG] Running:
+  C:\CustomRepo\highcharts.com.firstTask\testng.xml
+
+2023-03-02 20:40:51[TestNG-tests-1]INFO  class util.CustomTestListener -onStart method started 
+2023-03-02 20:40:51[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- setUpCucumber
+2023-03-02 20:40:51[TestNG-tests-1]WARN  c.e.r.service.ReportPortal -Base url for Report Portal server is not set!
+2023-03-02 20:40:51[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- setUpCucumber
+2023-03-02 20:40:51[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- setUpClass
+2023-03-02 20:40:51[TestNG-tests-1]WARN  c.e.r.service.ReportPortal -Base url for Report Portal server is not set!
+2023-03-02 20:40:51[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- setUpClass
+2023-03-02 20:40:51[TestNG-PoolService-1]INFO  class util.CustomTestListener -Method started runScenario
+2023-03-02 20:40:51[TestNG-PoolService-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- runScenario
+2023-03-02 20:40:51[TestNG-PoolService-0]INFO  class util.CustomTestListener -Method started runScenario
+2023-03-02 20:40:51[TestNG-PoolService-0]INFO  c.CustomMethodInvokedListener -This method is invoked before- runScenario
+2023-03-02 20:40:53[TestNG-PoolService-0]INFO  i.g.bonigarcia.wdm.WebDriverManager -Using chromedriver 110.0.5481.77 (resolved driver for Chrome 110)
+2023-03-02 20:40:53[TestNG-PoolService-1]INFO  i.g.bonigarcia.wdm.WebDriverManager -Using chromedriver 110.0.5481.77 (resolved driver for Chrome 110)
+2023-03-02 20:40:53[TestNG-PoolService-1]INFO  i.g.bonigarcia.wdm.WebDriverManager -Exporting webdriver.chrome.driver as C:\Users\vexli\.cache\selenium\chromedriver\win32\110.0.5481.77\chromedriver.exe
+2023-03-02 20:40:53[TestNG-PoolService-0]INFO  i.g.bonigarcia.wdm.WebDriverManager -Exporting webdriver.chrome.driver as C:\Users\vexli\.cache\selenium\chromedriver\win32\110.0.5481.77\chromedriver.exe
+2023-03-02 20:41:00[TestNG-PoolService-1]WARN  Defsteps -folder cleaning must be done before file opened as open csv hold them opened somehow
+2023-03-02 20:41:00[TestNG-PoolService-0]WARN  Defsteps -folder cleaning must be done before file opened as open csv hold them opened somehow
+2023-03-02 20:41:08[TestNG-PoolService-0]INFO  c.CustomMethodInvokedListener -This method is invoked after- runScenario
+2023-03-02 20:41:08[TestNG-PoolService-0]INFO  class util.CustomTestListener -Method passed runScenario
+2023-03-02 20:41:10[TestNG-PoolService-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- runScenario
+2023-03-02 20:41:10[TestNG-PoolService-1]INFO  class util.CustomTestListener -Method passed runScenario
+2023-03-02 20:41:10[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- tearDownClass
+2023-03-02 20:41:10[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- tearDownClass
+2023-03-02 20:41:10[TestNG-tests-1]INFO  class util.CustomTestListener -onFinish method finished 
+2023-03-02 20:47:44[main]INFO  org.testng.internal.Utils -[TestNG] Running:
+  C:\CustomRepo\highcharts.com.firstTask\testng.xml
+
+2023-03-02 20:47:44[TestNG-tests-1]INFO  class util.CustomTestListener -onStart method started 
+2023-03-02 20:47:44[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- setUpCucumber
+2023-03-02 20:47:44[TestNG-tests-1]WARN  c.e.r.service.ReportPortal -Base url for Report Portal server is not set!
+2023-03-02 20:47:44[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- setUpCucumber
+2023-03-02 20:47:44[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- setUpClass
+2023-03-02 20:47:44[TestNG-tests-1]WARN  c.e.r.service.ReportPortal -Base url for Report Portal server is not set!
+2023-03-02 20:47:44[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- setUpClass
+2023-03-02 20:47:44[TestNG-PoolService-0]INFO  class util.CustomTestListener -Method started runScenario
+2023-03-02 20:47:44[TestNG-PoolService-1]INFO  class util.CustomTestListener -Method started runScenario
+2023-03-02 20:47:44[TestNG-PoolService-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- runScenario
+2023-03-02 20:47:44[TestNG-PoolService-0]INFO  c.CustomMethodInvokedListener -This method is invoked before- runScenario
+2023-03-02 20:47:45[TestNG-PoolService-1]INFO  i.g.bonigarcia.wdm.WebDriverManager -Using chromedriver 110.0.5481.77 (resolved driver for Chrome 110)
+2023-03-02 20:47:45[TestNG-PoolService-0]INFO  i.g.bonigarcia.wdm.WebDriverManager -Using chromedriver 110.0.5481.77 (resolved driver for Chrome 110)
+2023-03-02 20:47:45[TestNG-PoolService-0]INFO  i.g.bonigarcia.wdm.WebDriverManager -Exporting webdriver.chrome.driver as C:\Users\vexli\.cache\selenium\chromedriver\win32\110.0.5481.77\chromedriver.exe
+2023-03-02 20:47:45[TestNG-PoolService-1]INFO  i.g.bonigarcia.wdm.WebDriverManager -Exporting webdriver.chrome.driver as C:\Users\vexli\.cache\selenium\chromedriver\win32\110.0.5481.77\chromedriver.exe
+2023-03-02 20:47:51[TestNG-PoolService-0]WARN  Defsteps -folder cleaning must be done before file opened as open csv hold them opened somehow
+2023-03-02 20:47:51[TestNG-PoolService-1]WARN  Defsteps -folder cleaning must be done before file opened as open csv hold them opened somehow
+2023-03-02 20:47:58[TestNG-PoolService-0]INFO  c.CustomMethodInvokedListener -This method is invoked after- runScenario
+2023-03-02 20:47:58[TestNG-PoolService-0]INFO  class util.CustomTestListener -Method passed runScenario
+2023-03-02 20:48:00[TestNG-PoolService-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- runScenario
+2023-03-02 20:48:00[TestNG-PoolService-1]INFO  class util.CustomTestListener -Method passed runScenario
+2023-03-02 20:48:00[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- tearDownClass
+2023-03-02 20:48:01[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- tearDownClass
+2023-03-02 20:48:01[TestNG-tests-1]INFO  class util.CustomTestListener -onFinish method finished 
+2023-03-02 20:51:23[main]INFO  org.testng.internal.Utils -[TestNG] Running:
+  C:\CustomRepo\highcharts.com.firstTask\testng.xml
+
+2023-03-02 20:51:23[TestNG-tests-1]INFO  class util.CustomTestListener -onStart method started 
+2023-03-02 20:51:23[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- setUpCucumber
+2023-03-02 20:51:24[TestNG-tests-1]INFO  c.epam.reportportal.service.Launch -Rerun: false
+2023-03-02 20:51:24[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- setUpCucumber
+2023-03-02 20:51:24[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- setUpClass
+2023-03-02 20:51:24[TestNG-tests-1]INFO  c.epam.reportportal.service.Launch -Rerun: false
+2023-03-02 20:51:26[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- setUpClass
+2023-03-02 20:51:26[TestNG-PoolService-1]INFO  class util.CustomTestListener -Method started runScenario
+2023-03-02 20:51:26[TestNG-PoolService-0]INFO  class util.CustomTestListener -Method started runScenario
+2023-03-02 20:51:26[TestNG-PoolService-0]INFO  c.CustomMethodInvokedListener -This method is invoked before- runScenario
+2023-03-02 20:51:26[TestNG-PoolService-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- runScenario
+2023-03-02 20:51:27[TestNG-PoolService-1]INFO  i.g.bonigarcia.wdm.WebDriverManager -Using chromedriver 110.0.5481.77 (resolved driver for Chrome 110)
+2023-03-02 20:51:27[TestNG-PoolService-0]INFO  i.g.bonigarcia.wdm.WebDriverManager -Using chromedriver 110.0.5481.77 (resolved driver for Chrome 110)
+2023-03-02 20:51:27[TestNG-PoolService-1]INFO  i.g.bonigarcia.wdm.WebDriverManager -Exporting webdriver.chrome.driver as C:\Users\vexli\.cache\selenium\chromedriver\win32\110.0.5481.77\chromedriver.exe
+2023-03-02 20:51:27[TestNG-PoolService-0]INFO  i.g.bonigarcia.wdm.WebDriverManager -Exporting webdriver.chrome.driver as C:\Users\vexli\.cache\selenium\chromedriver\win32\110.0.5481.77\chromedriver.exe
+2023-03-02 20:51:34[TestNG-PoolService-1]WARN  Defsteps -folder cleaning must be done before file opened as open csv hold them opened somehow
+2023-03-02 20:51:34[TestNG-PoolService-0]WARN  Defsteps -folder cleaning must be done before file opened as open csv hold them opened somehow
+2023-03-02 20:51:42[TestNG-PoolService-0]INFO  c.CustomMethodInvokedListener -This method is invoked after- runScenario
+2023-03-02 20:51:42[TestNG-PoolService-0]INFO  class util.CustomTestListener -Method passed runScenario
+2023-03-02 20:51:43[TestNG-PoolService-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- runScenario
+2023-03-02 20:51:43[TestNG-PoolService-1]INFO  class util.CustomTestListener -Method passed runScenario
+2023-03-02 20:51:43[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- tearDownClass
+2023-03-02 20:51:44[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- tearDownClass
+2023-03-02 20:51:44[TestNG-tests-1]INFO  class util.CustomTestListener -onFinish method finished 
+2023-03-02 21:01:53[main]INFO  org.testng.internal.Utils -[TestNG] Running:
+  C:\CustomRepo\highcharts.com.firstTask\testng.xml
+
+2023-03-02 21:01:53[TestNG-tests-1]INFO  class util.CustomTestListener -onStart method started 
+2023-03-02 21:01:53[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- setUpCucumber
+2023-03-02 21:01:53[TestNG-tests-1]ERROR c.epam.reportportal.utils.SslUtils -Unable to load trust store
+java.lang.IllegalArgumentException: resource <PATH_TO_YOUR_KEYSTORE> not found.
+	at com.google.common.base.Preconditions.checkArgument(Preconditions.java:220)
+	at com.google.common.io.Resources.getResource(Resources.java:194)
+	at com.epam.reportportal.utils.SslUtils.loadKeyStore(SslUtils.java:40)
+	at com.epam.reportportal.service.ReportPortal$Builder.defaultClient(ReportPortal.java:501)
+	at com.epam.reportportal.service.ReportPortal$Builder.lambda$buildClient$1(ReportPortal.java:430)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at com.epam.reportportal.service.ReportPortal$Builder.buildClient(ReportPortal.java:430)
+	at com.epam.reportportal.service.ReportPortal$Builder.build(ReportPortal.java:407)
+	at com.epam.reportportal.cucumber.AbstractReporter.buildReportPortal(AbstractReporter.java:193)
+	at com.epam.reportportal.cucumber.AbstractReporter.<init>(AbstractReporter.java:90)
+	at com.epam.reportportal.cucumber.StepReporter.<init>(StepReporter.java:46)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at io.cucumber.core.plugin.PluginFactory.newInstance(PluginFactory.java:116)
+	at io.cucumber.core.plugin.PluginFactory.instantiate(PluginFactory.java:79)
+	at io.cucumber.core.plugin.PluginFactory.create(PluginFactory.java:63)
+	at io.cucumber.core.plugin.Plugins.createPlugins(Plugins.java:32)
+	at io.cucumber.core.plugin.Plugins.<init>(Plugins.java:25)
+	at io.cucumber.testng.TestNGCucumberRunner.<init>(TestNGCucumberRunner.java:108)
+	at io.cucumber.testng.TestNGCucumberRunner.<init>(TestNGCucumberRunner.java:65)
+	at testngcucumberrunner.RunnerTests.setUpCucumber(RunnerTests.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:643)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:632)
+	at org.testng.TestRunner.run(TestRunner.java:594)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:471)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-02 21:01:53[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- setUpCucumber
+2023-03-02 21:01:53[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- setUpClass
+2023-03-02 21:01:53[TestNG-tests-1]ERROR c.epam.reportportal.utils.SslUtils -Unable to load trust store
+java.lang.IllegalArgumentException: resource <PATH_TO_YOUR_KEYSTORE> not found.
+	at com.google.common.base.Preconditions.checkArgument(Preconditions.java:220)
+	at com.google.common.io.Resources.getResource(Resources.java:194)
+	at com.epam.reportportal.utils.SslUtils.loadKeyStore(SslUtils.java:40)
+	at com.epam.reportportal.service.ReportPortal$Builder.defaultClient(ReportPortal.java:501)
+	at com.epam.reportportal.service.ReportPortal$Builder.lambda$buildClient$1(ReportPortal.java:430)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at com.epam.reportportal.service.ReportPortal$Builder.buildClient(ReportPortal.java:430)
+	at com.epam.reportportal.service.ReportPortal$Builder.build(ReportPortal.java:407)
+	at com.epam.reportportal.cucumber.AbstractReporter.buildReportPortal(AbstractReporter.java:193)
+	at com.epam.reportportal.cucumber.AbstractReporter.<init>(AbstractReporter.java:90)
+	at com.epam.reportportal.cucumber.StepReporter.<init>(StepReporter.java:46)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at io.cucumber.core.plugin.PluginFactory.newInstance(PluginFactory.java:116)
+	at io.cucumber.core.plugin.PluginFactory.instantiate(PluginFactory.java:79)
+	at io.cucumber.core.plugin.PluginFactory.create(PluginFactory.java:63)
+	at io.cucumber.core.plugin.Plugins.createPlugins(Plugins.java:32)
+	at io.cucumber.core.plugin.Plugins.<init>(Plugins.java:25)
+	at io.cucumber.testng.TestNGCucumberRunner.<init>(TestNGCucumberRunner.java:108)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.setUpClass(AbstractTestNGCucumberTests.java:27)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:471)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-02 21:01:53[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- setUpClass
+2023-03-02 21:01:53[TestNG-tests-1]INFO  class util.CustomTestListener -Method failed runScenario
+2023-03-02 21:01:53[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- tearDownClass
+2023-03-02 21:01:53[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- tearDownClass
+2023-03-02 21:01:53[TestNG-tests-1]INFO  class util.CustomTestListener -onFinish method finished 
+2023-03-02 21:05:45[main]INFO  org.testng.internal.Utils -[TestNG] Running:
+  C:\CustomRepo\highcharts.com.firstTask\testng.xml
+
+2023-03-02 21:05:45[TestNG-tests-1]INFO  class util.CustomTestListener -onStart method started 
+2023-03-02 21:05:46[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- setUpCucumber
+2023-03-02 21:05:46[TestNG-tests-1]INFO  c.epam.reportportal.service.Launch -Rerun: false
+2023-03-02 21:05:46[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- setUpCucumber
+2023-03-02 21:05:46[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- setUpClass
+2023-03-02 21:05:47[TestNG-tests-1]INFO  c.epam.reportportal.service.Launch -Rerun: false
+2023-03-02 21:05:49[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- setUpClass
+2023-03-02 21:05:49[TestNG-PoolService-1]INFO  class util.CustomTestListener -Method started runScenario
+2023-03-02 21:05:49[TestNG-PoolService-0]INFO  class util.CustomTestListener -Method started runScenario
+2023-03-02 21:05:49[TestNG-PoolService-0]INFO  c.CustomMethodInvokedListener -This method is invoked before- runScenario
+2023-03-02 21:05:49[TestNG-PoolService-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- runScenario
+2023-03-02 21:05:49[TestNG-PoolService-1]INFO  i.g.bonigarcia.wdm.WebDriverManager -Using chromedriver 110.0.5481.77 (resolved driver for Chrome 110)
+2023-03-02 21:05:49[TestNG-PoolService-0]INFO  i.g.bonigarcia.wdm.WebDriverManager -Using chromedriver 110.0.5481.77 (resolved driver for Chrome 110)
+2023-03-02 21:05:49[TestNG-PoolService-1]INFO  i.g.bonigarcia.wdm.WebDriverManager -Exporting webdriver.chrome.driver as C:\Users\vexli\.cache\selenium\chromedriver\win32\110.0.5481.77\chromedriver.exe
+2023-03-02 21:05:49[TestNG-PoolService-0]INFO  i.g.bonigarcia.wdm.WebDriverManager -Exporting webdriver.chrome.driver as C:\Users\vexli\.cache\selenium\chromedriver\win32\110.0.5481.77\chromedriver.exe
+2023-03-02 21:05:56[TestNG-PoolService-0]WARN  Defsteps -folder cleaning must be done before file opened as open csv hold them opened somehow
+2023-03-02 21:05:56[TestNG-PoolService-1]WARN  Defsteps -folder cleaning must be done before file opened as open csv hold them opened somehow
+2023-03-02 21:06:03[TestNG-PoolService-0]INFO  c.CustomMethodInvokedListener -This method is invoked after- runScenario
+2023-03-02 21:06:03[TestNG-PoolService-0]INFO  class util.CustomTestListener -Method passed runScenario
+2023-03-02 21:06:05[TestNG-PoolService-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- runScenario
+2023-03-02 21:06:05[TestNG-PoolService-1]INFO  class util.CustomTestListener -Method passed runScenario
+2023-03-02 21:06:05[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- tearDownClass
+2023-03-02 21:06:06[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- tearDownClass
+2023-03-02 21:06:06[TestNG-tests-1]INFO  class util.CustomTestListener -onFinish method finished 
+2023-03-02 21:10:52[main]INFO  org.testng.internal.Utils -[TestNG] Running:
+  C:\CustomRepo\highcharts.com.firstTask\testng.xml
+
+2023-03-02 21:10:52[TestNG-tests-1]INFO  class util.CustomTestListener -onStart method started 
+2023-03-02 21:10:52[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- setUpCucumber
+2023-03-02 21:10:53[TestNG-tests-1]INFO  c.epam.reportportal.service.Launch -Rerun: false
+2023-03-02 21:10:53[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- setUpCucumber
+2023-03-02 21:10:53[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- setUpClass
+2023-03-02 21:10:53[TestNG-tests-1]INFO  c.epam.reportportal.service.Launch -Rerun: false
+2023-03-02 21:10:54[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- setUpClass
+2023-03-02 21:10:54[TestNG-PoolService-0]INFO  class util.CustomTestListener -Method started runScenario
+2023-03-02 21:10:54[TestNG-PoolService-0]INFO  c.CustomMethodInvokedListener -This method is invoked before- runScenario
+2023-03-02 21:10:54[TestNG-PoolService-1]INFO  class util.CustomTestListener -Method started runScenario
+2023-03-02 21:10:54[TestNG-PoolService-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- runScenario
+2023-03-02 21:10:55[TestNG-PoolService-0]INFO  i.g.bonigarcia.wdm.WebDriverManager -Using chromedriver 110.0.5481.77 (resolved driver for Chrome 110)
+2023-03-02 21:10:55[TestNG-PoolService-1]INFO  i.g.bonigarcia.wdm.WebDriverManager -Using chromedriver 110.0.5481.77 (resolved driver for Chrome 110)
+2023-03-02 21:10:55[TestNG-PoolService-0]INFO  i.g.bonigarcia.wdm.WebDriverManager -Exporting webdriver.chrome.driver as C:\Users\vexli\.cache\selenium\chromedriver\win32\110.0.5481.77\chromedriver.exe
+2023-03-02 21:10:55[TestNG-PoolService-1]INFO  i.g.bonigarcia.wdm.WebDriverManager -Exporting webdriver.chrome.driver as C:\Users\vexli\.cache\selenium\chromedriver\win32\110.0.5481.77\chromedriver.exe
+2023-03-02 21:11:02[TestNG-PoolService-1]WARN  Defsteps -folder cleaning must be done before file opened as open csv hold them opened somehow
+2023-03-02 21:11:02[TestNG-PoolService-0]WARN  Defsteps -folder cleaning must be done before file opened as open csv hold them opened somehow
+2023-03-02 21:11:10[TestNG-PoolService-0]INFO  c.CustomMethodInvokedListener -This method is invoked after- runScenario
+2023-03-02 21:11:10[TestNG-PoolService-0]INFO  class util.CustomTestListener -Method passed runScenario
+2023-03-02 21:11:11[TestNG-PoolService-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- runScenario
+2023-03-02 21:11:11[TestNG-PoolService-1]INFO  class util.CustomTestListener -Method passed runScenario
+2023-03-02 21:11:11[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- tearDownClass
+2023-03-02 21:11:11[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- tearDownClass
+2023-03-02 21:11:11[TestNG-tests-1]INFO  class util.CustomTestListener -onFinish method finished 
+2023-03-02 21:14:48[main]INFO  c.epam.reportportal.service.Launch -Rerun: false
+2023-03-02 21:14:48[TestNG-tests-1]INFO  class util.CustomTestListener -onStart method started 
+2023-03-02 21:14:48[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- setUpCucumber
+2023-03-02 21:14:49[TestNG-tests-1]INFO  c.epam.reportportal.service.Launch -Rerun: false
+2023-03-02 21:14:50[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- setUpCucumber
+2023-03-02 21:14:50[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- setUpClass
+2023-03-02 21:14:50[TestNG-tests-1]INFO  c.epam.reportportal.service.Launch -Rerun: false
+2023-03-02 21:14:51[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- setUpClass
+2023-03-02 21:14:51[TestNG-PoolService-0]INFO  class util.CustomTestListener -Method started runScenario
+2023-03-02 21:14:51[TestNG-PoolService-1]INFO  class util.CustomTestListener -Method started runScenario
+2023-03-02 21:14:51[TestNG-PoolService-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- runScenario
+2023-03-02 21:14:51[TestNG-PoolService-0]INFO  c.CustomMethodInvokedListener -This method is invoked before- runScenario
+2023-03-02 21:14:51[TestNG-PoolService-1]INFO  i.g.bonigarcia.wdm.WebDriverManager -Using chromedriver 110.0.5481.77 (resolved driver for Chrome 110)
+2023-03-02 21:14:51[TestNG-PoolService-0]INFO  i.g.bonigarcia.wdm.WebDriverManager -Using chromedriver 110.0.5481.77 (resolved driver for Chrome 110)
+2023-03-02 21:14:51[TestNG-PoolService-1]INFO  i.g.bonigarcia.wdm.WebDriverManager -Exporting webdriver.chrome.driver as C:\Users\vexli\.cache\selenium\chromedriver\win32\110.0.5481.77\chromedriver.exe
+2023-03-02 21:14:51[TestNG-PoolService-0]INFO  i.g.bonigarcia.wdm.WebDriverManager -Exporting webdriver.chrome.driver as C:\Users\vexli\.cache\selenium\chromedriver\win32\110.0.5481.77\chromedriver.exe
+2023-03-02 21:14:58[TestNG-PoolService-0]WARN  Defsteps -folder cleaning must be done before file opened as open csv hold them opened somehow
+2023-03-02 21:14:58[TestNG-PoolService-1]WARN  Defsteps -folder cleaning must be done before file opened as open csv hold them opened somehow
+2023-03-02 21:15:06[TestNG-PoolService-0]INFO  c.CustomMethodInvokedListener -This method is invoked after- runScenario
+2023-03-02 21:15:06[TestNG-PoolService-0]INFO  class util.CustomTestListener -Method passed runScenario
+2023-03-02 21:15:08[TestNG-PoolService-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- runScenario
+2023-03-02 21:15:08[TestNG-PoolService-1]INFO  class util.CustomTestListener -Method passed runScenario
+2023-03-02 21:15:08[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- tearDownClass
+2023-03-02 21:15:09[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- tearDownClass
+2023-03-02 21:15:09[TestNG-tests-1]INFO  class util.CustomTestListener -onFinish method finished 
+2023-03-02 21:17:30[main]INFO  org.testng.internal.Utils -[TestNG] Running:
+  C:\CustomRepo\highcharts.com.firstTask\testng.xml
+
+2023-03-02 21:17:30[TestNG-tests-1]INFO  class util.CustomTestListener -onStart method started 
+2023-03-02 21:17:30[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- setUpCucumber
+2023-03-02 21:17:31[TestNG-tests-1]INFO  c.epam.reportportal.service.Launch -Rerun: false
+2023-03-02 21:17:31[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- setUpCucumber
+2023-03-02 21:17:31[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- setUpClass
+2023-03-02 21:17:31[TestNG-tests-1]INFO  c.epam.reportportal.service.Launch -Rerun: false
+2023-03-02 21:17:32[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- setUpClass
+2023-03-02 21:17:32[TestNG-PoolService-0]INFO  class util.CustomTestListener -Method started runScenario
+2023-03-02 21:17:32[TestNG-PoolService-1]INFO  class util.CustomTestListener -Method started runScenario
+2023-03-02 21:17:32[TestNG-PoolService-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- runScenario
+2023-03-02 21:17:32[TestNG-PoolService-0]INFO  c.CustomMethodInvokedListener -This method is invoked before- runScenario
+2023-03-02 21:17:33[TestNG-PoolService-1]INFO  i.g.bonigarcia.wdm.WebDriverManager -Using chromedriver 110.0.5481.77 (resolved driver for Chrome 110)
+2023-03-02 21:17:33[TestNG-PoolService-0]INFO  i.g.bonigarcia.wdm.WebDriverManager -Using chromedriver 110.0.5481.77 (resolved driver for Chrome 110)
+2023-03-02 21:17:33[TestNG-PoolService-1]INFO  i.g.bonigarcia.wdm.WebDriverManager -Exporting webdriver.chrome.driver as C:\Users\vexli\.cache\selenium\chromedriver\win32\110.0.5481.77\chromedriver.exe
+2023-03-02 21:17:33[TestNG-PoolService-0]INFO  i.g.bonigarcia.wdm.WebDriverManager -Exporting webdriver.chrome.driver as C:\Users\vexli\.cache\selenium\chromedriver\win32\110.0.5481.77\chromedriver.exe
+2023-03-02 21:17:39[TestNG-PoolService-0]WARN  Defsteps -folder cleaning must be done before file opened as open csv hold them opened somehow
+2023-03-02 21:17:39[TestNG-PoolService-1]WARN  Defsteps -folder cleaning must be done before file opened as open csv hold them opened somehow
+2023-03-02 21:17:47[TestNG-PoolService-0]INFO  c.CustomMethodInvokedListener -This method is invoked after- runScenario
+2023-03-02 21:17:47[TestNG-PoolService-0]INFO  class util.CustomTestListener -Method passed runScenario
+2023-03-02 21:17:49[TestNG-PoolService-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- runScenario
+2023-03-02 21:17:49[TestNG-PoolService-1]INFO  class util.CustomTestListener -Method passed runScenario
+2023-03-02 21:17:49[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- tearDownClass
+2023-03-02 21:17:49[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- tearDownClass
+2023-03-02 21:17:49[TestNG-tests-1]INFO  class util.CustomTestListener -onFinish method finished 

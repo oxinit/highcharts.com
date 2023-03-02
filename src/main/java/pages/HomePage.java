@@ -1,5 +1,6 @@
 package pages;
 
+import com.epam.reportportal.testng.ReportPortalTestNGListener;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,7 +8,10 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Listeners;
 import org.testng.asserts.SoftAssert;
+import util.CustomMethodInvokedListener;
+import util.CustomTestListener;
 import util.model.TooltipEmployeeForExpectedValue;
 
 import java.io.IOException;
@@ -15,7 +19,7 @@ import java.time.Duration;
 import java.util.List;
 
 import static util.OpenCSVReader.readFromCSVExpectedValue;
-
+@Listeners({CustomTestListener.class , CustomMethodInvokedListener.class, ReportPortalTestNGListener.class})
 public class HomePage extends BasePage {
     @FindBy(css = "a[id='CybotCookiebotDialogBodyButtonAccept']")
     private WebElement cookie;
@@ -31,57 +35,85 @@ public class HomePage extends BasePage {
     private WebElement cookiePopUpDialog;
     @FindBy(xpath = "//*[local-name() = 'g'][contains(@class,'highcharts-markers')][contains(@aria-label,'Highsoft')]")
     private WebElement boxForHighsoftGraph;
-    @FindBy(xpath="//*[contains(@class,'highcharts-exporting-group')]")
+    @FindBy(xpath = "//*[contains(@class,'highcharts-exporting-group')]")
     private WebElement chartContextMenu;
-    @FindBy(xpath="//*[text()='Download CSV']")
+    @FindBy(xpath = "//*[text()='Download CSV']")
     private WebElement downloadCsvButton;
 
     public HomePage(WebDriver driver) {
         super(driver);
     }
+
     String tooltipForGraphsElements = "//*[local-name() = 'text'][@x='8']";
-    public void openHomePage(String url)  {
-     driver.get(url);
+
+    public void openHomePage(String url) {
+        driver.get(url);
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(3))
+                    .until(ExpectedConditions
+                            .elementToBeSelected(cookiePopUpDialog));
+            highLightElement(cookiePopUpDialog, driver);
+            //this condition never pass so we click on cookie after wait
+        } catch (Exception e) {
+            highLightElement(cookie, driver);
+            cookie.click();
+        }
+
+
+    }
+
+    public void clickFirstGraphsButton() {
         try {
             new WebDriverWait(driver, Duration.ofSeconds(3))
                     .until(ExpectedConditions
                             .elementToBeSelected(cookiePopUpDialog));
             //this condition never pass so we click on cookie after wait
         } catch (Exception e) {
-            cookie.click();
-        }
+        highLightElement(graphsButtons.get(0), driver);}
+        graphsButtons.get(0).click();
     }
-    public void clickFirstGraphsButton() {graphsButtons.get(0).click();}
+
     public void clickSecondGraphsButton() {
+        highLightElement(graphsButtons.get(1), driver);
         graphsButtons.get(1).click();
     }
+
     public void clickChartContextMenu() {
+        highLightElement(chartContextMenu, driver);
         new Actions(driver).click(chartContextMenu).perform();
-        }
+    }
+
     public void clickDownloadCsvButton() {
-        downloadCsvButton.click();}
+        highLightElement(downloadCsvButton, driver);
+        downloadCsvButton.click();
+    }
 
     public void checkTooltip() throws IOException {
-        List<TooltipEmployeeForExpectedValue> tooltips = readFromCSVExpectedValue("src/test/resources/tooltips_expected_values.csv");
+        List<TooltipEmployeeForExpectedValue> tooltips =
+                readFromCSVExpectedValue("src/test/resources/tooltips_expected_values.csv");
         final int FIRST_ELEMENT = 0;
         SoftAssert softAssert = new SoftAssert();
         Actions ac = new Actions(driver);
+        highLightElement(boxForHighsoftGraph,driver);
         ac.moveToElement(boxForHighsoftGraph)
                 .moveToElement(boxForHighsoftGraph, -400, 50).perform();
-                softAssert.assertTrue(driver.findElement(By.xpath(tooltipForGraphsElements)).getText()
+        highLightElement(driver.findElement(By.xpath(tooltipForGraphsElements)), driver);
+        softAssert.assertTrue(driver.findElement(By.xpath(tooltipForGraphsElements)).getText()
                         .contains(tooltips.get(FIRST_ELEMENT).getDate())
                         && driver.findElement(By.xpath(tooltipForGraphsElements)).getText()
                         .contains(tooltips.get(FIRST_ELEMENT).getEmployeeNameAndStatus())
                         && driver.findElement(By.xpath(tooltipForGraphsElements)).getText()
                         .contains(tooltips.get(FIRST_ELEMENT).getQuantity()),
                 "The tooltip text is wrong expected= "
-                        + tooltips.get(FIRST_ELEMENT).getEmployeeNameAndStatus()+' '
-                        + tooltips.get(FIRST_ELEMENT).getDate()+' '
-                        + tooltips.get(FIRST_ELEMENT).getQuantity()+' '
-                        +" but found " + driver.findElement(By.xpath(tooltipForGraphsElements)).getText());
+                        + tooltips.get(FIRST_ELEMENT).getEmployeeNameAndStatus() + ' '
+                        + tooltips.get(FIRST_ELEMENT).getDate() + ' '
+                        + tooltips.get(FIRST_ELEMENT).getQuantity() + ' '
+                        + " but found " + driver.findElement(By.xpath(tooltipForGraphsElements)).getText());
         int i = 1;
         while (i < tooltips.size()) {
+            highLightElement(pathForHighsoftEmployeeGraph.get(i),driver);
             ac.moveToElement(pathForHighsoftEmployeeGraph.get(i)).perform();
+            highLightElement(driver.findElement(By.xpath(tooltipForGraphsElements)), driver);
             softAssert.assertTrue(driver.findElement(By.xpath(tooltipForGraphsElements)).getText()
                             .contains(tooltips.get(i).getDate())
                             && driver.findElement(By.xpath(tooltipForGraphsElements)).getText()
@@ -89,10 +121,10 @@ public class HomePage extends BasePage {
                             && driver.findElement(By.xpath(tooltipForGraphsElements)).getText()
                             .contains(tooltips.get(i).getQuantity()),
                     "The tooltip text is wrong expected "
-                            + tooltips.get(i).getEmployeeNameAndStatus()+' '
-                            + tooltips.get(FIRST_ELEMENT).getDate()+' '
-                            + tooltips.get(FIRST_ELEMENT).getQuantity()+' '
-                            +" but found " + driver.findElement(By.xpath(tooltipForGraphsElements)).getText());
+                            + tooltips.get(i).getEmployeeNameAndStatus() + ' '
+                            + tooltips.get(FIRST_ELEMENT).getDate() + ' '
+                            + tooltips.get(FIRST_ELEMENT).getQuantity() + ' '
+                            + " but found " + driver.findElement(By.xpath(tooltipForGraphsElements)).getText());
             i++;
         }
         softAssert.assertAll();

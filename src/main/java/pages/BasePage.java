@@ -1,5 +1,6 @@
 package pages;
 
+import com.epam.reportportal.testng.ReportPortalTestNGListener;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -7,7 +8,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Listeners;
 import org.testng.asserts.SoftAssert;
+import util.CustomMethodInvokedListener;
+import util.CustomTestListener;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,15 +20,18 @@ import java.util.List;
 
 import static util.OpenCSVReader.readFromCSV;
 import static util.OpenCSVReader.readFromCSVExpectedValue;
-
+@Listeners({CustomTestListener.class , CustomMethodInvokedListener.class, ReportPortalTestNGListener.class})
 public class BasePage {
+
+
     WebDriver driver;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
-    public void compareTwoDifferentCSV() throws IOException {
+
+    public  void compareTwoDifferentCSV() throws IOException {
         try {
             new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.alertIsPresent());
         }
@@ -39,6 +46,7 @@ public class BasePage {
         }
         softAssert.assertAll();
         }
+
     }
     public void cleanTempCsvFolder() throws IOException {
         FileUtils.cleanDirectory(new File(System.getProperty("user.dir")+ File.separator + "src" +
@@ -52,5 +60,9 @@ public class BasePage {
             JavascriptExecutor executor =(JavascriptExecutor) driver;
             executor.executeScript("arguments[0].click();",webElement);
         }
+    }
+    public void highLightElement(WebElement ele,WebDriver driver){
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+        jsExecutor.executeScript("arguments[0].setAttribute('style', 'border:2px solid red; background:yellow')", ele);
     }
 }
