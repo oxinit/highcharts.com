@@ -202,3 +202,117 @@
 2023-03-03 16:09:21[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- tearDownClass
 2023-03-03 16:09:21[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- tearDownClass
 2023-03-03 16:09:21[TestNG-tests-1]INFO  class util.CustomTestListener -onFinish method finished 
+2023-03-03 16:30:14[main]INFO  c.epam.reportportal.service.Launch -Rerun: false
+2023-03-03 16:30:14[main]INFO  org.testng.internal.Utils -[TestNG] Running:
+  C:\CustomRepo\highcharts.com.firstTask\testng.xml
+
+2023-03-03 16:30:14[TestNG-tests-1]INFO  class util.CustomTestListener -onStart method started 
+2023-03-03 16:30:14[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- setUpCucumber
+2023-03-03 16:30:14[TestNG-tests-1]INFO  c.epam.reportportal.service.Launch -Rerun: false
+2023-03-03 16:30:15[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- setUpCucumber
+2023-03-03 16:30:15[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- setUpClass
+2023-03-03 16:30:15[TestNG-tests-1]INFO  c.epam.reportportal.service.Launch -Rerun: false
+2023-03-03 16:30:17[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- setUpClass
+2023-03-03 16:30:17[TestNG-PoolService-1]INFO  class util.CustomTestListener -Method started runScenario
+2023-03-03 16:30:17[TestNG-PoolService-0]INFO  class util.CustomTestListener -Method started runScenario
+2023-03-03 16:30:17[TestNG-PoolService-0]INFO  c.CustomMethodInvokedListener -This method is invoked before- runScenario
+2023-03-03 16:30:17[TestNG-PoolService-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- runScenario
+2023-03-03 16:30:17[TestNG-PoolService-1]INFO  i.g.bonigarcia.wdm.WebDriverManager -Using chromedriver 110.0.5481.77 (resolved driver for Chrome 110)
+2023-03-03 16:30:17[TestNG-PoolService-0]INFO  i.g.bonigarcia.wdm.WebDriverManager -Using chromedriver 110.0.5481.77 (resolved driver for Chrome 110)
+2023-03-03 16:30:17[TestNG-PoolService-0]INFO  i.g.bonigarcia.wdm.WebDriverManager -Exporting webdriver.chrome.driver as C:\Users\vexli\.cache\selenium\chromedriver\win32\110.0.5481.77\chromedriver.exe
+2023-03-03 16:30:17[TestNG-PoolService-1]INFO  i.g.bonigarcia.wdm.WebDriverManager -Exporting webdriver.chrome.driver as C:\Users\vexli\.cache\selenium\chromedriver\win32\110.0.5481.77\chromedriver.exe
+2023-03-03 16:30:24[TestNG-PoolService-1]WARN  stepdefinitions.DefinitionSteps -folder cleaning must be done before file opened as open csv hold them opened somehow
+2023-03-03 16:30:24[TestNG-PoolService-0]WARN  stepdefinitions.DefinitionSteps -folder cleaning must be done before file opened as open csv hold them opened somehow
+2023-03-03 16:30:27[TestNG-PoolService-1]INFO  stepdefinitions.DefinitionSteps -step with click on 'Google search for highcharts' graph button
+2023-03-03 16:30:27[TestNG-PoolService-1]INFO  stepdefinitions.DefinitionSteps -step with click on revenue graph button
+2023-03-03 16:30:27[TestNG-PoolService-0]INFO  stepdefinitions.DefinitionSteps -step with click on 'Google search for highcharts' graph button
+2023-03-03 16:30:27[TestNG-PoolService-0]INFO  stepdefinitions.DefinitionSteps -step with click on revenue graph button
+2023-03-03 16:30:27[TestNG-PoolService-1]INFO  stepdefinitions.DefinitionSteps -step for click on menu graph button
+2023-03-03 16:30:27[TestNG-PoolService-1]INFO  stepdefinitions.DefinitionSteps -step for click download as csv file
+2023-03-03 16:30:31[TestNG-PoolService-0]INFO  stepdefinitions.DefinitionSteps -step for tooltip check
+2023-03-03 16:30:31[TestNG-PoolService-0]WARN  stepdefinitions.DefinitionSteps -driver quited
+2023-03-03 16:30:31[TestNG-PoolService-0]INFO  c.CustomMethodInvokedListener -This method is invoked after- runScenario
+2023-03-03 16:30:31[TestNG-PoolService-0]INFO  class util.CustomTestListener -Method passed runScenario
+2023-03-03 16:30:33[TestNG-PoolService-1]INFO  stepdefinitions.DefinitionSteps -step for check of two csv
+2023-03-03 16:30:33[TestNG-PoolService-1]WARN  stepdefinitions.DefinitionSteps -driver quited
+2023-03-03 16:30:33[TestNG-PoolService-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- runScenario
+2023-03-03 16:30:33[TestNG-PoolService-1]INFO  class util.CustomTestListener -Method passed runScenario
+2023-03-03 16:30:33[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- tearDownClass
+2023-03-03 16:30:33[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- tearDownClass
+2023-03-03 16:30:33[TestNG-tests-1]INFO  class util.CustomTestListener -onFinish method finished 
+2023-03-03 16:39:30[main]INFO  c.epam.reportportal.service.Launch -Rerun: false
+2023-03-03 16:39:31[main]INFO  org.testng.internal.Utils -[TestNG] Running:
+  C:\CustomRepo\highcharts.com.firstTask\testng.xml
+
+2023-03-03 16:39:31[TestNG-tests-1]INFO  class util.CustomTestListener -onStart method started 
+2023-03-03 16:39:31[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- setUpCucumber
+2023-03-03 16:39:31[TestNG-tests-1]INFO  c.epam.reportportal.service.Launch -Rerun: false
+2023-03-03 16:39:32[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- setUpCucumber
+2023-03-03 16:39:32[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- setUpClass
+2023-03-03 16:39:32[TestNG-tests-1]INFO  c.epam.reportportal.service.Launch -Rerun: false
+2023-03-03 16:39:33[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- setUpClass
+2023-03-03 16:39:33[TestNG-PoolService-1]INFO  class util.CustomTestListener -Method started runScenario
+2023-03-03 16:39:33[TestNG-PoolService-0]INFO  class util.CustomTestListener -Method started runScenario
+2023-03-03 16:39:33[TestNG-PoolService-0]INFO  c.CustomMethodInvokedListener -This method is invoked before- runScenario
+2023-03-03 16:39:33[TestNG-PoolService-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- runScenario
+2023-03-03 16:39:34[TestNG-PoolService-0]INFO  i.g.bonigarcia.wdm.WebDriverManager -Using chromedriver 110.0.5481.77 (resolved driver for Chrome 110)
+2023-03-03 16:39:34[TestNG-PoolService-1]INFO  i.g.bonigarcia.wdm.WebDriverManager -Using chromedriver 110.0.5481.77 (resolved driver for Chrome 110)
+2023-03-03 16:39:34[TestNG-PoolService-0]INFO  i.g.bonigarcia.wdm.WebDriverManager -Exporting webdriver.chrome.driver as C:\Users\vexli\.cache\selenium\chromedriver\win32\110.0.5481.77\chromedriver.exe
+2023-03-03 16:39:34[TestNG-PoolService-1]INFO  i.g.bonigarcia.wdm.WebDriverManager -Exporting webdriver.chrome.driver as C:\Users\vexli\.cache\selenium\chromedriver\win32\110.0.5481.77\chromedriver.exe
+2023-03-03 16:39:40[TestNG-PoolService-0]WARN  stepdefinitions.DefinitionSteps -folder cleaning must be done before file opened as open csv hold them opened somehow
+2023-03-03 16:39:40[TestNG-PoolService-1]WARN  stepdefinitions.DefinitionSteps -folder cleaning must be done before file opened as open csv hold them opened somehow
+2023-03-03 16:39:43[TestNG-PoolService-0]INFO  stepdefinitions.DefinitionSteps -step with click on 'Google search for highcharts' graph button
+2023-03-03 16:39:44[TestNG-PoolService-0]INFO  stepdefinitions.DefinitionSteps -step with click on revenue graph button
+2023-03-03 16:39:44[TestNG-PoolService-1]INFO  stepdefinitions.DefinitionSteps -step with click on 'Google search for highcharts' graph button
+2023-03-03 16:39:44[TestNG-PoolService-1]INFO  stepdefinitions.DefinitionSteps -step with click on revenue graph button
+2023-03-03 16:39:44[TestNG-PoolService-1]INFO  stepdefinitions.DefinitionSteps -step for click on menu graph button
+2023-03-03 16:39:44[TestNG-PoolService-1]INFO  stepdefinitions.DefinitionSteps -step for click download as csv file
+2023-03-03 16:39:47[TestNG-PoolService-0]INFO  stepdefinitions.DefinitionSteps -step for tooltip check
+2023-03-03 16:39:47[TestNG-PoolService-0]WARN  stepdefinitions.DefinitionSteps -driver quited
+2023-03-03 16:39:48[TestNG-PoolService-0]INFO  c.CustomMethodInvokedListener -This method is invoked after- runScenario
+2023-03-03 16:39:48[TestNG-PoolService-0]INFO  class util.CustomTestListener -Method passed runScenario
+2023-03-03 16:39:49[TestNG-PoolService-1]INFO  stepdefinitions.DefinitionSteps -step for check of two csv
+2023-03-03 16:39:49[TestNG-PoolService-1]WARN  stepdefinitions.DefinitionSteps -driver quited
+2023-03-03 16:39:49[TestNG-PoolService-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- runScenario
+2023-03-03 16:39:49[TestNG-PoolService-1]INFO  class util.CustomTestListener -Method passed runScenario
+2023-03-03 16:39:49[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- tearDownClass
+2023-03-03 16:39:50[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- tearDownClass
+2023-03-03 16:39:50[TestNG-tests-1]INFO  class util.CustomTestListener -onFinish method finished 
+2023-03-03 16:46:45[main]WARN  c.e.r.testng.BaseTestNGListener -WARNING! More than one ReportPortal listener is added
+2023-03-03 16:46:45[main]WARN  org.testng.TestNG -Ignoring duplicate listener : com.epam.reportportal.testng.ReportPortalTestNGListener
+2023-03-03 16:46:45[main]WARN  org.testng.TestNG -Ignoring duplicate listener : com.epam.reportportal.testng.ReportPortalTestNGListener
+2023-03-03 16:46:46[main]INFO  c.epam.reportportal.service.Launch -Rerun: false
+2023-03-03 16:46:46[TestNG-tests-1]INFO  class util.CustomTestListener -onStart method started 
+2023-03-03 16:46:46[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- setUpCucumber
+2023-03-03 16:46:46[TestNG-tests-1]INFO  c.epam.reportportal.service.Launch -Rerun: false
+2023-03-03 16:46:47[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- setUpCucumber
+2023-03-03 16:46:47[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- setUpClass
+2023-03-03 16:46:48[TestNG-tests-1]INFO  c.epam.reportportal.service.Launch -Rerun: false
+2023-03-03 16:46:49[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- setUpClass
+2023-03-03 16:46:49[TestNG-PoolService-1]INFO  class util.CustomTestListener -Method started runScenario
+2023-03-03 16:46:49[TestNG-PoolService-0]INFO  class util.CustomTestListener -Method started runScenario
+2023-03-03 16:46:49[TestNG-PoolService-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- runScenario
+2023-03-03 16:46:49[TestNG-PoolService-0]INFO  c.CustomMethodInvokedListener -This method is invoked before- runScenario
+2023-03-03 16:46:49[TestNG-PoolService-0]INFO  i.g.bonigarcia.wdm.WebDriverManager -Using chromedriver 110.0.5481.77 (resolved driver for Chrome 110)
+2023-03-03 16:46:49[TestNG-PoolService-1]INFO  i.g.bonigarcia.wdm.WebDriverManager -Using chromedriver 110.0.5481.77 (resolved driver for Chrome 110)
+2023-03-03 16:46:49[TestNG-PoolService-1]INFO  i.g.bonigarcia.wdm.WebDriverManager -Exporting webdriver.chrome.driver as C:\Users\vexli\.cache\selenium\chromedriver\win32\110.0.5481.77\chromedriver.exe
+2023-03-03 16:46:49[TestNG-PoolService-0]INFO  i.g.bonigarcia.wdm.WebDriverManager -Exporting webdriver.chrome.driver as C:\Users\vexli\.cache\selenium\chromedriver\win32\110.0.5481.77\chromedriver.exe
+2023-03-03 16:46:56[TestNG-PoolService-1]WARN  stepdefinitions.DefinitionSteps -folder cleaning must be done before file opened as open csv hold them opened somehow
+2023-03-03 16:46:56[TestNG-PoolService-0]WARN  stepdefinitions.DefinitionSteps -folder cleaning must be done before file opened as open csv hold them opened somehow
+2023-03-03 16:46:59[TestNG-PoolService-1]INFO  stepdefinitions.DefinitionSteps -step with click on 'Google search for highcharts' graph button
+2023-03-03 16:46:59[TestNG-PoolService-0]INFO  stepdefinitions.DefinitionSteps -step with click on 'Google search for highcharts' graph button
+2023-03-03 16:46:59[TestNG-PoolService-1]INFO  stepdefinitions.DefinitionSteps -step with click on revenue graph button
+2023-03-03 16:46:59[TestNG-PoolService-0]INFO  stepdefinitions.DefinitionSteps -step with click on revenue graph button
+2023-03-03 16:46:59[TestNG-PoolService-1]INFO  stepdefinitions.DefinitionSteps -step for click on menu graph button
+2023-03-03 16:46:59[TestNG-PoolService-1]INFO  stepdefinitions.DefinitionSteps -step for click download as csv file
+2023-03-03 16:47:03[TestNG-PoolService-0]INFO  stepdefinitions.DefinitionSteps -step for tooltip check
+2023-03-03 16:47:03[TestNG-PoolService-0]WARN  stepdefinitions.DefinitionSteps -driver quited
+2023-03-03 16:47:03[TestNG-PoolService-0]INFO  c.CustomMethodInvokedListener -This method is invoked after- runScenario
+2023-03-03 16:47:03[TestNG-PoolService-0]INFO  class util.CustomTestListener -Method passed runScenario
+2023-03-03 16:47:05[TestNG-PoolService-1]INFO  stepdefinitions.DefinitionSteps -step for check of two csv
+2023-03-03 16:47:05[TestNG-PoolService-1]WARN  stepdefinitions.DefinitionSteps -driver quited
+2023-03-03 16:47:05[TestNG-PoolService-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- runScenario
+2023-03-03 16:47:05[TestNG-PoolService-1]INFO  class util.CustomTestListener -Method passed runScenario
+2023-03-03 16:47:05[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked before- tearDownClass
+2023-03-03 16:47:05[TestNG-tests-1]INFO  c.CustomMethodInvokedListener -This method is invoked after- tearDownClass
+2023-03-03 16:47:05[TestNG-tests-1]INFO  class util.CustomTestListener -onFinish method finished 

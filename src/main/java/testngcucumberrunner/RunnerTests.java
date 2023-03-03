@@ -9,7 +9,7 @@ import org.testng.annotations.DataProvider;
 @CucumberOptions(
         features = "src/test/resources/features/Scenario.feature",
         glue = "stepdefinitions",
-        plugin = {"pretty", "json:target/cucumber-reports/cucumber.json", "com.epam.reportportal.cucumber.StepReporter"})
+        plugin = {"pretty", "json:target/cucumber-reports/cucumber.json", "com.epam.reportportal.cucumber.ScenarioReporter"})
 public class RunnerTests extends AbstractTestNGCucumberTests {
     private TestNGCucumberRunner testNGCucumberRunner;
 
