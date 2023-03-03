@@ -52,7 +52,7 @@ public class HomePage extends BasePage {
             new WebDriverWait(driver, Duration.ofSeconds(3))
                     .until(ExpectedConditions
                             .elementToBeSelected(cookiePopUpDialog));
-            highLightElement(cookiePopUpDialog, driver);
+
             //this condition never pass so we click on cookie after wait
         } catch (Exception e) {
             highLightElement(cookie, driver);

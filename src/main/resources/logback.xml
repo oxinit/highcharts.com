@@ -6,6 +6,7 @@
             <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5p %m%n</pattern>
         </encoder>
     </appender>
+
     <appender name="ReportPortalAppender" class="com.epam.reportportal.logback.appender.ReportPortalAppender">
         <encoder>
             <pattern>%d{HH:mm:ss.SSS} [%t] %-5level - %msg%n</pattern>
@@ -25,7 +26,7 @@
             <pattern>%d{yyyy-MM-dd HH:mm:ss}[%thread]%-5level %logger{36} -%msg%n</pattern>
         </encoder>
     </appender>
-    <root>
+    <root level="info">
         <appender-ref ref="stdout"/>
         <appender-ref ref="rollingFile"/>
         <appender-ref ref="ReportPortalAppender" />

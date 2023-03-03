@@ -47,6 +47,8 @@ public class DefinitionSteps extends RunnerTests {
         ChromeOptions options = new ChromeOptions();
         options.setExperimentalOption("prefs", prefs);
         logger.trace("download default directory has been set");
+
+
         String browser="chrome";
         driver = WebDriverManager.getInstance(browser).capabilities(options).create() ;
         driver.manage().window().maximize();
