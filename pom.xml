@@ -12,29 +12,9 @@
         <maven.compiler.source>18</maven.compiler.source>
         <maven.compiler.target>18</maven.compiler.target>
     </properties>
+
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.21.0</version>
-                <configuration>
-                    <testFailureIgnore>true</testFailureIgnore>
-                    <suiteXmlFiles>
-                        <suiteXmlFile>testng.xml</suiteXmlFile>
-                    </suiteXmlFiles>
-                    <properties>
-                        <property>
-                            <name>usedefaultlisteners</name>
-                            <value>true</value> <!-- disabling default listeners is optional -->
-                        </property>
-                        <property>
-                            <name>listener</name>
-                            <value>com.epam.reportportal.testng.ReportPortalTestNGListener</value>
-                        </property>
-                    </properties>
-                </configuration>
-            </plugin>
             <plugin>
                 <groupId>net.masterthought</groupId>
                 <artifactId>maven-cucumber-reporting</artifactId>
@@ -58,6 +38,7 @@
             </plugin>
         </plugins>
     </build>
+
     <dependencies>
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
@@ -96,24 +77,8 @@
             <artifactId>cucumber-testng</artifactId>
             <version>7.4.1</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.epam.reportportal/agent-java-cucumber6 -->
-        <dependency>
-            <groupId>com.epam.reportportal</groupId>
-            <artifactId>agent-java-cucumber6</artifactId>
-            <version>5.1.2</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/com.epam.reportportal/logger-java-logback -->
-        <dependency>
-            <groupId>com.epam.reportportal</groupId>
-            <artifactId>logger-java-logback</artifactId>
-            <version>5.1.3</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/com.epam.reportportal/agent-java-testng -->
-        <dependency>
-            <groupId>com.epam.reportportal</groupId>
-            <artifactId>agent-java-testng</artifactId>
-            <version>5.1.3</version>
-        </dependency>
+
+
 
         <!-- https://mvnrepository.com/artifact/com.epam.reportportal/logger-java-log4j -->
         <dependency>
@@ -154,12 +119,17 @@
             <version>1.4.5</version>
             <scope>test</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.epam.reportportal/agent-java-cucumber6 -->
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>RELEASE</version>
-            <scope>test</scope>
+            <groupId>com.epam.reportportal</groupId>
+            <artifactId>agent-java-cucumber6</artifactId>
+            <version>5.1.2</version>
         </dependency>
-
+        <!-- https://mvnrepository.com/artifact/com.epam.reportportal/logger-java-logback -->
+        <dependency>
+            <groupId>com.epam.reportportal</groupId>
+            <artifactId>logger-java-logback</artifactId>
+            <version>5.1.3</version>
+        </dependency>
     </dependencies>
 </project>

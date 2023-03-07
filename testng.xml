@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="BDD Test Suite" verbose="1" parallel="tests"
-       thread-count="3" >
+<suite name="BDD Test Suite" verbose="1" parallel="tests" thread-count="3" >
     <listeners>
-        <listener class-name="util.CustomTestListener"></listener>
-        <listener class-name="util.CustomMethodInvokedListener"></listener>
-        <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener" />
+        <listener class-name="util.CustomTestListener"/>
+        <listener class-name="util.CustomMethodInvokedListener"/>
     </listeners>
     <test name="MainScenario" annotations="JDK">
         <classes>

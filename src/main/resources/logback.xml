@@ -4,14 +4,19 @@
         <encoder>
             # Pattern of log message for file appender
             <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5p %m%n</pattern>
+            <pattern>[%t] - %msg%n</pattern>
         </encoder>
     </appender>
-
+    # Appender for reportPortal without it logs at portal not complete
     <appender name="ReportPortalAppender" class="com.epam.reportportal.logback.appender.ReportPortalAppender">
         <encoder>
             <pattern>%d{HH:mm:ss.SSS} [%t] %-5level - %msg%n</pattern>
         </encoder>
     </appender>
+    <logger name="binary_data_logger" level="info" additivity="false">
+        <appender-ref ref="ReportPortalAppender"/>
+    </logger>
+
     # File appender
     <appender name="rollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
@@ -26,9 +31,9 @@
             <pattern>%d{yyyy-MM-dd HH:mm:ss}[%thread]%-5level %logger{36} -%msg%n</pattern>
         </encoder>
     </appender>
-    <root>
+    <root level="info">
         <appender-ref ref="stdout"/>
         <appender-ref ref="rollingFile"/>
-        <appender-ref ref="ReportPortalAppender" />
+        <appender-ref ref="ReportPortalAppender"/>
     </root>
 </configuration>
