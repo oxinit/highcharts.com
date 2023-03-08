@@ -1,7 +1,8 @@
 package manager;
 
 import org.openqa.selenium.WebDriver;
-import pages.*;
+import pages.HomePage;
+
 
 public class PageFactoryManager {
 
@@ -11,6 +12,8 @@ public class PageFactoryManager {
         this.driver = driver;
     }
 
-    public HomePage getHomePage() {return new HomePage(driver);}
+    public HomePage getHomePage() {
+        return new HomePage(driver);
+    }
 
 }
